@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liguang Wang | Xplore-energy Lab</title>
+    <meta name="description" content="Xplore-energy Lab, Zhejiang University: synchrotron X-ray imaging and spectroscopy (TXM, nano-CT, XANES) for battery and energy materials.">
+    <meta name="theme-color" content="#1b2a47">
+    <link rel="icon" href="univ_logo.jpg">
+    <meta property="og:title" content="Xplore-energy Lab | Liguang Wang, Zhejiang University">
+    <meta property="og:description" content="Synchrotron imaging and spectroscopy of battery and energy materials.">
+    <meta property="og:type" content="website">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet" media="print" onload="this.media=\'all\'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"></noscript>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Modern Academic Theme Styles */
+        :root {
+            --primary-color: #1b2a47; /* Deep Slate Navy */
+            --accent-color: #2a6f97;  /* Muted Teal/Blue */
+            --bg-cream: #faf9f6;      /* Off-white background */
+            --text-dark: #2d3748;     /* Charcoal grey for body text */
+            --transition-speed: 0.25s;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-cream);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Top Navigation Header */
+        .navbar {
+            background-color: #ffffff !important;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 15px 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+        }
+
+        /* Combined Header Logos (Top-Left) */
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--primary-color) !important;
+            font-size: 1.45rem;
+            text-decoration: none;
+        }
+
+        /* Group Logo */
+        .navbar-logo {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* Vertical Divider Between Logos */
+        .brand-divider {
+            height: 28px;
+            width: 1px;
+            background-color: #cbd5e1; /* Subtle slate gray line */
+            margin: 0 4px;
+        }
+
+        /* University Logo */
+        .univ-logo {
+            height: 55px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* Adjust alignment for mobile screens */
+        @media (max-width: 991px) {
+            .univ-logo-wrapper {
+                margin-left: 0;
+                margin-top: 15px;
+                padding-left: 0;
+                border-left: none;
+            }
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: #64748b !important;
+            margin-left: 20px;
+            padding: 8px 12px !important;
+            border-radius: 6px;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-color) !important;
+            background-color: #f1f5f9;
+        }
+
+        /* Simulated Individual Pages (Containers) */
+        .page-content {
+            flex-grow: 1;
+            padding: 60px 0;
+        }
+
+        /* Custom Title Decorations */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+            bottom: -8px;
+            left: 0;
+        }
+
+        /* Home Page Elements */
+        .profile-img-container {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 260px;
+            height: 260px;
+            object-fit: cover;
+            border: 8px solid #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+        }
+
+        /* Large Highlighted Works Showcase Carousel Styles */
+        .showcase-carousel-wrapper {
+            margin-top: 50px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+            background: #f8fafc; /* Clean light background for padding space */
+            border: 1px solid #e2e8f0;
+        }
+
+        .showcase-carousel-wrapper .carousel-inner {
+            height: 420px; /* Fixed display box height */
+        }
+
+        .carousel-item {
+            height: 100%;
+        }
+
+        .showcase-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Ensures the entire image fits inside the box without cropping */
+            background-color: #0f172a; /* Dark background to neatly frame illustrations/figures */
+        }
+
+        .carousel-caption-custom {
+            background: rgba(27, 42, 71, 0.85); /* Matches your --primary-color */
+            padding: 12px 20px;
+            border-radius: 8px;
+            bottom: 15px;
+            left: 20px;
+            right: 20px;
+            text-align: left;
+        }
+
+        .bio-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+        }
+
+        .social-btn {
+            background-color: #ffffff;
+            color: var(--primary-color);
+            border: 1px solid #cbd5e1;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .social-btn:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border-color: var(--primary-color);
+        }
+
+        /* News Section Layout */
+        .news-timeline {
+            border-left: 2px solid #e2e8f0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .news-item {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .news-item::before {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            border: 3px solid #ffffff;
+            left: -38px;
+            top: 6px;
+            box-shadow: 0 0 0 4px #e0f2fe;
+        }
+
+        .news-date {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        /* Styling for News Images */
+        .news-img-wrapper {
+            max-width: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .news-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Projects Cards */
+        .project-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+        }
+
+        .project-img-wrapper {
+            height: 200px;
+            overflow: hidden;
+            background: #f1f5f9;
+        }
+
+        .project-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-body {
+            padding: 24px;
+        }
+
+        .project-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+
+        /* Team Cards */
+        .team-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: transform var(--transition-speed) ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .team-img-wrapper {
+            width: 100%;
+            background: #f8fafc; /* Subtle off-white backdrop for uneven aspect ratios */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .team-avatar {
+            width: 100%;
+            height: auto; /* Scales dynamically based on the image's original proportion */
+            display: block;
+        }
+
+        .team-info {
+            padding: 20px 15px;
+            text-align: center;
+            margin-top: auto; /* Pushes the text area to the bottom so cards remain uniform in height */
+        }
+
+        /* Custom Manual Publications List Layout */
+        .year-section {
+            margin-bottom: 45px;
+        }
+
+        .year-heading {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .pub-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+        }
+
+        .pub-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+            border-color: #cbd5e1;
+        }
+
+        .pub-title {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .pub-authors {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-bottom: 6px;
+        }
+
+        .pub-meta {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .journal-bold {
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .author-self {
+            font-weight: 700;
+            text-decoration: underline;
+            color: var(--primary-color);
+        }
+
+        .pub-indicators {
+            margin-top: 8px;
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        .pub-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .pub-title a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        .pub-links {
+            margin-top: 10px;
+        }
+
+        .pub-link {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            border: 1px solid #cbd5e1;
+            border-radius: 20px;
+            padding: 2px 12px;
+            text-decoration: none;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .pub-link:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: #ffffff;
+        }
+
+        /* Publication Year Filter Buttons */
+        .year-filter-btn {
+            background-color: #ffffff;
+            color: var(--primary-color);
+            border: 1px solid #cbd5e1;
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .year-filter-btn:hover, .year-filter-btn.active {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border-color: var(--primary-color);
+        }
+
+        /* Custom Styling for Publication Dropdown */
+        .form-select {
+            border-color: #cbd5e1;
+            color: var(--primary-color);
+            font-weight: 600;
+            border-radius: 8px;
+        }
+
+        .form-select:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 0.25rem rgba(42, 111, 151, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            padding: 5px 0;
+            margin-top: auto;
+        }
+
+        /* Fade Animation */
+        .fade-in {
+            animation: fadeIn var(--transition-speed) ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ====== Enhancements (v2) ====== */
+        :root { --accent-soft:#e8f1f7; --line:#e2e8f0; --muted:#64748b; --nav-h:84px; }
+        html { scroll-behavior:smooth; }
+        body { font-family:'DM Sans',system-ui,-apple-system,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif; line-height:1.65; }
+        .navbar-brand, .section-title, .bio-title, .project-title, .year-heading, .group-title { font-family:'Playfair Display',Georgia,'Songti SC',serif; }
+        .skip-link { position:absolute; left:-999px; top:8px; background:var(--primary-color); color:#fff; padding:8px 14px; border-radius:6px; z-index:3000; }
+        .skip-link:focus { left:8px; color:#fff; }
+        :focus-visible { outline:3px solid rgba(42,111,151,.55); outline-offset:2px; }
+        .text-accent { color:var(--accent-color); }
+
+        .navbar { background-color:rgba(255,255,255,.93) !important; backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); }
+        .nav-link { position:relative; margin-left:8px; }
+        .nav-link.active { background:transparent; }
+        .nav-link.active::after { content:""; position:absolute; left:12px; right:12px; bottom:2px; height:2px; background:var(--accent-color); border-radius:2px; }
+        @media (max-width:991px){ .nav-link{margin-left:0;} .navbar-brand{font-size:1.1rem;} .univ-logo{height:42px;} .navbar-logo{height:34px;} }
+        @media (max-width:420px){ .navbar-brand .brand-text{display:none;} }
+
+        .page-content { padding:56px 0 72px; }
+        .hero { background:radial-gradient(900px 380px at 90% -5%, var(--accent-soft), transparent 65%); }
+        .profile-img { border-radius:50%; box-shadow:0 0 0 1px var(--line), 0 10px 30px rgba(27,42,71,.12); }
+        .bio-title { font-size:clamp(2rem,4.5vw,2.7rem); line-height:1.15; }
+        .chip { display:inline-block; padding:4px 12px; margin:0 6px 8px 0; border-radius:999px; background:var(--accent-soft); color:var(--accent-color); font-size:.82rem; font-weight:600; }
+        .join-card { background:#fff; border:1px solid var(--line); border-left:4px solid var(--accent-color); border-radius:12px; padding:18px 22px; box-shadow:0 4px 12px rgba(0,0,0,.03); }
+        .btn-accent { background:var(--accent-color); color:#fff; border:0; border-radius:8px; font-weight:600; }
+        .btn-accent:hover { background:var(--primary-color); color:#fff; }
+
+        .section-head { margin-bottom:36px; }
+        .section-head .section-title { margin-bottom:0; }
+        .section-lead { color:var(--muted); margin:22px 0 0; max-width:680px; }
+
+        .showcase-carousel-wrapper .carousel-inner { height:clamp(240px,48vw,460px); }
+        .carousel-caption-custom { backdrop-filter:blur(4px); }
+
+        .news-extra-btn { margin-left:30px; }
+        .project-card, .team-card, .pub-card { border-color:var(--line); }
+        .project-card .project-link { color:var(--accent-color); text-decoration:none; font-weight:600; }
+        .project-card .project-link:hover { color:var(--primary-color); }
+
+        .team-group { margin-bottom:48px; }
+        .group-title { font-size:1.35rem; color:var(--primary-color); border-bottom:2px solid var(--line); padding-bottom:8px; margin-bottom:22px; }
+        .team-avatar { aspect-ratio:4/5; object-fit:cover; object-position:center top; }
+        .team-name { font-weight:700; color:var(--primary-color); font-size:1.05rem; margin-bottom:2px; }
+
+        .pub-toolbar { position:sticky; top:var(--nav-h); z-index:50; background:rgba(250,249,246,.96); backdrop-filter:blur(6px); padding:12px 0; margin-bottom:24px; border-bottom:1px solid var(--line); }
+        .pub-card { border-left:3px solid transparent; }
+        .pub-card:hover { border-left-color:var(--accent-color); }
+        .pub-title { font-weight:600; }
+        .year-count { font-family:'DM Sans',sans-serif; font-size:.8rem; font-weight:600; color:var(--accent-color); background:var(--accent-soft); border-radius:999px; padding:2px 10px; margin-left:10px; vertical-align:middle; }
+
+        footer { padding:28px 0; }
+        #toTop { position:fixed; right:20px; bottom:20px; width:44px; height:44px; border-radius:50%; border:0; background:var(--primary-color); color:#fff; box-shadow:0 6px 16px rgba(0,0,0,.2); opacity:0; pointer-events:none; transition:opacity .25s; z-index:1000; }
+        #toTop.show { opacity:1; pointer-events:auto; }
+        @media (prefers-reduced-motion:reduce){ *{animation:none !important; transition:none !important;} html{scroll-behavior:auto;} }
+
+        /* ====== v3 tweaks ====== */
+        .showcase-carousel-wrapper { margin-top:0; }
+        .showcase-carousel-wrapper .carousel-inner { height:clamp(220px,38vw,380px); }
+        .more-toggle { display:inline-block; font-weight:600; color:var(--accent-color); text-decoration:none; margin-bottom:6px; }
+        .more-toggle:hover { color:var(--primary-color); }
+        .more-toggle .when-open, .more-toggle[aria-expanded="true"] .when-closed { display:none; }
+        .more-toggle[aria-expanded="true"] .when-open { display:inline; }
+        .more-toggle[aria-expanded="true"] i { transform:rotate(180deg); }
+        .navbar-brand { font-size:1.2rem; }
+        .group-title { font-family:'DM Sans',system-ui,sans-serif; font-size:.9rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--accent-color); padding-bottom:6px; margin-bottom:18px; }
+        @media (max-width:991px){ .navbar-brand{font-size:1.05rem;} }
+
+        /* ====== v4: Highlights on Research page ====== */
+        .subhead { font-family:'Playfair Display',Georgia,'Songti SC',serif; font-weight:700; font-size:1.5rem; color:var(--primary-color); margin:0 0 18px; }
+        .showcase-carousel-wrapper .carousel-inner { height:clamp(240px,44vw,440px); }
+    </style>
+</head>
+<body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#about">
+                <img src="univ_logo.jpg" alt="Zhejiang University logo" class="univ-logo">
+                <span class="brand-divider"></span>
+                <img src="logowhite.jpg" alt="Xplore-energy Lab logo" class="navbar-logo">
+                <span class="ms-1 brand-text">Xplore-energy Lab</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+    <section id="about" class="page page-content fade-in hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                    <div class="profile-img-container">
+                        <img src="profile.jpg" class="rounded-circle profile-img" alt="Liguang Wang Profile Photo">
+                    </div>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="mailto:wanglg@zju.edu.cn" class="btn btn-sm social-btn"><i class="fa-regular fa-envelope me-1"></i> Email</a>
+                        <a href="https://scholar.google.com/citations?user=iT0dJ5MAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" class="btn btn-sm social-btn"><i class="fa-solid fa-graduation-cap me-1"></i> Scholar</a>
+                        <a href="https://person.zju.edu.cn/wanglg" target="_blank" rel="noopener noreferrer" class="btn btn-sm social-btn"><i class="fa-solid fa-house me-1"></i> Home</a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <span class="text-uppercase fw-bold text-muted small" style="letter-spacing:.12em">Zhejiang University</span>
+                    <h1 class="bio-title mb-3">Liguang Wang (王利光)</h1>
+                    <p class="lead text-muted mb-4">Ph.D. • Professor • Battery materials &amp; Synchrotron techniques</p>
+                    <div class="mb-4" aria-label="Research keywords">
+                        <span class="chip">Imaging techniques (2D/3D TXM-XANES, CT, BCDI)</span><span class="chip">Diffraction &amp; Spectroscopy</span><span class="chip">Cathodes</span><span class="chip">Solid-state batteries</span><span class="chip">Machine learning</span>
+                    </div>
+                    <p class="mb-3">
+                        <strong>Welcome to our research group! </strong>
+                    </p>
+                    <p class="mb-3">
+                        Our group focuses on developing advanced <strong>synchrotron X-ray imaging and spectroscopy techniques</strong> to reveal how energy materials evolve structurally and chemically under realistic operating conditions. By combining cutting-edge synchrotron instrumentation with quantitative imaging and spectroscopy approaches, we aim to uncover the fundamental mechanisms that govern <strong>the performance, degradation, and transformation of batteries and other electrochemical energy systems</strong>. 
+                    </p>
+                    <div class="collapse" id="moreAbout">
+                    <p class="mb-3">
+                        Our research integrates a range of advanced characterization methods, particularly transmission X-ray microscopy (TXM), nano-computed tomography (<strong>nano-CT</strong>), and two- and three-dimensional X-ray absorption near-edge structure <strong>(2D/3D XANES) mapping</strong>. These techniques enable us to visualize and quantify structural, chemical, and electrochemical transformations across multiple length scales, providing new insights into the complex processes that control energy storage and conversion materials. 
+                    </p>
+                    <p class="mb-3">
+                        Building on extensive expertise in synchrotron instrumentation and beamline development at the Advanced Photon Source (APS), Argonne National Laboratory (ANL), our group is committed to advancing next-generation characterization methodologies while addressing critical challenges in sustainable energy technologies. 
+                    </p>
+                    </div>
+                    <a class="more-toggle" data-bs-toggle="collapse" href="#moreAbout" role="button" aria-expanded="false" aria-controls="moreAbout"><span class="when-closed">Read more</span><span class="when-open">Show less</span> <i class="fa-solid fa-chevron-down ms-1 small"></i></a>
+
+</div>
+            </div>
+
+            <div class="row mt-5"><div class="col-lg-10 mx-auto"><div class="join-card">
+                        <h2 class="h5 fw-bold mb-2" style="font-family:'Playfair Display',Georgia,serif;">Join Us</h2>
+                        <p class="mb-3">We are always interested in working with <strong>motivated students, postdoctoral researchers, and collaborators</strong> who share our passion for synchrotron science, advanced characterization, and sustainable energy techniques.</p>
+                        <a href="mailto:wanglg@zju.edu.cn?subject=Prospective%20member%20%2F%20collaboration" class="btn btn-accent btn-sm px-3"><i class="fa-regular fa-envelope me-1"></i> Get in touch</a>
+                        <p class="mt-3 mb-0 small text-muted"><i class="fa-solid fa-location-dot me-2 text-accent"></i>Zijingang campus, Zhejiang University, Hangzhou, China</p>
+                    </div></div></div>
+            <!-- End of Showcase Section -->
+
+        </div>
+    </section>
+
+    <section id="news" class="page page-content fade-in">
+        <div class="container">
+            <div class="section-head"><h2 class="section-title">Latest News</h2></div>
+            <div class="row">
+                <div class="col-lg-10 col-xl-8">
+                    <div class="news-timeline">
+
+                        <!-- OPTION A: News Item WITH a Picture -->
+<!--
+                        <div class="news-item">
+                            <div class="news-date">July 18, 2026</div>
+                            <div class="row g-3 align-items-start">
+                                
+                                <div class="col-md-8">
+                                    <h5 class="fw-bold text-dark">Exciting Image Update Here</h5>
+                                    <p class="text-muted">This is an example of a news update that includes an image banner. The Bootstrap grid cleanly splits the space on wider screens and stacks perfectly on mobile views.</p>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="news-img-wrapper">
+                                        <img src="news_pic1.jpg" class="news-img" alt="Description of the news image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+-->
+                        <div class="news-item">
+                            <div class="news-date">Nov 2026</div>
+                            <h5 class="fw-bold text-dark">New Paper Published in <em>Advanced Materials</em></h5>
+                            <p class="text-muted">Congratulations to Jiaxin on the publication of her new paper, “<strong>Dynamic Interfacial S–O Bonding Stabilizes Oxygen Redox through Reversible Electron Confinement</strong>” in Advanced Materials.</p>
+                        </div>
+
+                        <div class="news-item">
+                            <div class="news-date">Oct 2026</div>
+                            <h5 class="fw-bold text-dark">New Paper Published in <em>J. Mater. Chem. A</em></h5>
+                            <p class="text-muted">Congratulations to Jiahui on the publication of her first paper, “<strong>Crystal-scale engineering of layered oxide cathodes: structure–property relationships and design principles</strong>” in J. Mater. Chem. A.</p>
+                        </div>
+
+                        <div class="news-item">
+                            <div class="news-date">Oct 2026</div>
+                            <div class="row g-3 align-items-start">
+                                
+                                <div class="col-md-8">
+                                    <h5 class="fw-bold text-dark">Recognized Among the World's Top 2% of Scientists</h5>
+                                    <p class="text-muted">We are delighted to share that Dr. Liguang Wang has been included in the world's top 2% scientists list for the third consecutive year, based on the citation impact of the research, as reported in the Stanford-Elsevier database.</p>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="news-img-wrapper">
+                                        <img src="top2scientist.jpg" loading="lazy" class="news-img" alt="Stanford–Elsevier top 2% scientists list">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news-item">
+                            <div class="news-date">Oct 2026</div>
+                            <div class="row g-3 align-items-start">
+                                
+                                <div class="col-md-8">
+                                    <h5 class="fw-bold text-dark">New Paper Published in <em>Photon Science</em></h5>
+                                    <p class="text-muted">Congratulations to Yikang on the publication of his new paper, “<strong>Spatial Mapping of Solid Electrolyte Interphase via Synchrotron Infrared Microspectroscopy</strong>” in Photon Science.</p>
+                                </div>
+                                
+                                <div class="col-md-4">
+                                    <div class="news-img-wrapper">
+                                        <img src="yikang_paper1.jpg" loading="lazy" class="news-img" alt="Figure from the Photon Science paper">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- OPTION B: Keep it the Current Way (Text Only) -->
+
+                        <div class="news-item">
+                            <div class="news-date">Aug 2026</div>
+                            <h5 class="fw-bold text-dark">Congrats again to Yikang on Receiving an NSFC Grant</h5>
+                            <p class="text-muted">Congratulations to our postdoctoral researcher, Yikang, on being awarded a grant from NSFC.</p>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-date">Jun 2026</div>
+                            <h5 class="fw-bold text-dark">Congrats to Yikang on Receiving a Postdoc Research Grant</h5>
+                            <p class="text-muted">Congrats to our postdoctoral researcher, Yikang, on being awarded a grant from China Postdoctoral Science Foundation.</p>
+                        </div>                        
+                        <div class="news-item">
+                            <div class="news-date">Jun 2026</div>
+                            <h5 class="fw-bold text-dark">Granted a Key Program</h5>
+                            <p class="text-muted">We are honored to receive support from the National Key R&amp;D Program of China. This recognition will enable us to further advance our research and in-operando synchrotron characterizations.</p>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-date">May 2026</div>
+                            <h5 class="fw-bold text-dark">New Journey Begins</h5>
+                            <p class="text-muted">New Journey.</p>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-date">Sep 2025</div>
+                            <h5 class="fw-bold text-dark">Congrats again to Xueyan on Receiving Another Research Grant</h5>
+                            <p class="text-muted">Congratulations to our postdoctoral researcher, Xueyan, on securing another research grant from the Zhejiang Province Selected Foundation of China.</p>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-date">Aug 2025</div>
+                            <h5 class="fw-bold text-dark">Congrats to Xueyan on Receiving an NSFC Grant</h5>
+                            <p class="text-muted">Congratulations to our postdoctoral researcher, Xueyan, on being awarded a grant from NSFC.</p>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-date">Jan 2024</div>
+                            <h5 class="fw-bold text-dark">Awarded Zhejiang NSF Outstanding Youth Funding</h5>
+                            <p class="text-muted">We are honored to receive support from the Zhejiang Natural Science Foundation through the Outstanding Youth Program.</p>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-date">Jan 2023</div>
+                            <h5 class="fw-bold text-dark">Awarded an NSFC General Program Grant</h5>
+                            <p class="text-muted">We are pleased to announce that our research has been awarded funding by the National Natural Science Foundation of China.</p>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-date">Jan 2023</div>
+                            <h5 class="fw-bold text-dark">Officially Launching at ZJU</h5>
+                            <p class="text-muted">Starting...</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="page page-content fade-in">
+        <div class="container">
+            <div class="section-head"><h2 class="section-title">Research</h2><p class="section-lead">Highlights of our recent work, and the three themes that connect it.</p></div>
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="subhead">Highlights</h3>
+                    <div class="showcase-carousel-wrapper">
+                        <div id="highlightedWorksCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#highlightedWorksCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#highlightedWorksCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#highlightedWorksCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#highlightedWorksCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                
+                                <!-- Slide 1 -->
+                                <div class="carousel-item active">
+                                    <a href="https://doi.org/10.1038/s41586-022-05238-3" target="_blank" rel="noopener noreferrer" aria-label="Read the Nature paper"><img src="highlight1.jpg" class="d-block showcase-img" alt="Novel Cathode Stabilization Strategy"></a>
+                                    <div class="carousel-caption d-none d-md-block carousel-caption-custom">
+                                        <h5 class="fw-bold mb-1"><a href="https://doi.org/10.1038/s41586-022-05238-3" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">Novel Cathode Stabilization Strategy — <em>Nature</em></a></h5>
+                                        <p class="small mb-0 text-light">Stabilizing Ni-rich layered cathodes via a coherent perovskite phase strategy. Published in <em>Nature</em>. <a href="https://doi.org/10.1038/s41586-022-05238-3" target="_blank" rel="noopener noreferrer" class="text-white fw-semibold">Read the paper <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a></p>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="carousel-item">
+                                    <img src="highlight2.jpg" loading="lazy" class="d-block showcase-img" alt="Multimodal Synchrotron Techniques for Battery Materials">
+                                    <div class="carousel-caption d-none d-md-block carousel-caption-custom">
+                                        <h5 class="fw-bold mb-1 text-white">Multimodal Synchrotron Techniques for Battery Materials</h5>
+                                        <p class="small mb-0 text-light">Highlighting our advanced studies on probing battery materials via multimodal synchrotron characterization.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3 -->
+                                <div class="carousel-item">
+                                    <img src="highlight3.jpg" loading="lazy" class="d-block showcase-img" alt="Principles of 2D TXM-XANES Chemical Mapping">
+                                    <div class="carousel-caption d-none d-md-block carousel-caption-custom">
+                                        <h5 class="fw-bold mb-1 text-white">Principles of 2D TXM-XANES Chemical Mapping</h5>
+                                        <p class="small mb-0 text-light">Unlocking advanced synchrotron imaging principles for quantitative 2D transmission X-ray microscopy and XANES mapping.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 4 -->
+                                <div class="carousel-item">
+                                    <img src="highlight4.jpg" loading="lazy" class="d-block showcase-img" alt="In-House Developed Analysis Algorithms">
+                                    <div class="carousel-caption d-none d-md-block carousel-caption-custom">
+                                        <h5 class="fw-bold mb-1 text-white">In-House Developed Analysis Algorithms</h5>
+                                        <p class="small mb-0 text-light">Advanced characterization tools empowered by custom automated algorithms and machine learning.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#highlightedWorksCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#highlightedWorksCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="subhead">Research Directions</h3>
+            <div class="row g-4 mt-2">
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="project1.jpg" class="project-img" loading="lazy" alt="Layered oxide cathode materials">
+                        </div>
+                        <div class="project-body">
+                            <h4 class="project-title">Cathode Materials</h4>
+                            <p class="text-muted small">We explore the structural and chemical evolution of high-energy-density layered oxide cathodes, including Ni-rich and Li- and Mn-rich materials, to reveal the fundamental mechanisms controlling energy density, degradation, and lifetime.</p>
+                            <a href="#publications" class="project-link" data-pub-search="cathode">Related publications <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="project2.jpg" class="project-img" loading="lazy" alt="Solid-state battery interfaces">
+                        </div>
+                        <div class="project-body">
+                            <h4 class="project-title">Solid-State Batteries</h4>
+                            <p class="text-muted small">We investigate interfacial phenomena, device architectures, and degradation pathways in solid-state batteries through advanced characterization approaches to accelerate the development of next-generation energy storage technologies.</p>
+                            <a href="#publications" class="project-link" data-pub-search="solid">Related publications <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-img-wrapper">
+                            <img src="project3.jpg" class="project-img" loading="lazy" alt="Synchrotron imaging and analysis tools">
+                        </div>
+                        <div class="project-body">
+                            <h4 class="project-title">Synchrotron Techniques</h4>
+                            <p class="text-muted small">We create next-generation synchrotron characterization tools by combining advanced X-ray methodologies with self-developed algorithms and machine learning for automated discovery of materials processes across multiple length scales.</p>
+                            <a href="#publications" class="project-link" data-pub-search="">All publications <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" class="page page-content fade-in">
+        <div class="container">
+            <div class="section-head"><h2 class="section-title">Publications</h2></div>
+            
+            <div class="pub-toolbar">
+                <div class="row g-2 align-items-center">
+                    <div class="col-12 col-md">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white"><i class="fa-solid fa-magnifying-glass text-muted"></i></span>
+                            <input id="pubSearch" type="search" class="form-control" placeholder="Search title, author, or journal…" aria-label="Search publications">
+                        </div>
+                    </div>
+                    <div class="col-7 col-md-auto"><select id="yearSelect" class="form-select" aria-label="Filter by year"><option value="all">All years</option></select></div>
+                    <div class="col-5 col-md-auto text-end"><span id="pubCount" class="small text-muted" aria-live="polite"></span></div>
+                </div>
+            </div>
+            <p id="pubEmpty" class="text-muted text-center py-5" hidden>No publications match your search.</p>
+
+            <div class="row mt-2">
+                <div class="col-lg-12">
+
+                    <!-- =================== 2026 =================== -->
+                    <div class="year-section" data-year="2026">
+                        <h3 class="year-heading">2026</h3>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adma.75712" target="_blank" rel="noopener noreferrer">Dynamic Interfacial S–O Bonding Stabilizes Oxygen Redox through Reversible Electron Confinement</a></h5>
+                            <div class="pub-authors">Jiaxin Yan, Yuanheng Wang, Ruichen Zhu, Xin Chen, Haixia Yang, Zhengyang Bao, Yifan Li, Chade Lv, <span class="author-self">Liguang Wang*</span>, Pengjian Zuo*</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Materials</span>, 2026, doi: 10.1002/adma.75712</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adma.75712" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/aenm.71714" target="_blank" rel="noopener noreferrer">Machine Learning in Liquid Electrolyte Design for Rechargeable Batteries: Addressing Fundamental Challenges</a></h5>
+                            <div class="pub-authors">Qianqian Liu*, Chaojie Wang, Zeyi Zhang, Ming Xiao, Xiaokai Hao, Kunzhe Wang, <span class="author-self">Liguang Wang*</span></div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Energy Materials</span>, 2026, 0:e71714</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/aenm.71714" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/photonsci.6c00063" target="_blank" rel="noopener noreferrer">Spatial Mapping of Solid Electrolyte Interphase via Synchrotron Infrared Microspectroscopy</a></h5>
+                            <div class="pub-authors">Yikang Yu, Jiayi Zhang, Ruichen Zhu, Wenjie Yu, Xuefeng Wang*, <span class="author-self">Liguang Wang*</span></div>
+                            <div class="pub-meta"><span class="journal-bold">Photon Science</span>, 2026, DOI: 10.1021/photonsci.6c00063</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/photonsci.6c00063" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adma.74727" target="_blank" rel="noopener noreferrer">Oxygen-Vacancy Engineering of Na4Fe3(PO4)2P2O7 Enables Fast and Wide-Temperature Sodium Storage</a></h5>
+                            <div class="pub-authors">Longqing Zhang, Rui Sun, Chengcheng He, Quanqiang Yuan, Zijun Deng, Zhe Cheng, Yan Zhang, Zhengyang Zhao, Qian Ning, Yuhong Liang, Jing Xua, Yang Ren*, <span class="author-self">Wang, Liguang*</span>, Xucai Yin*</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Materials</span>, 2026, e74727</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adma.74727" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1038/s41560-026-02112-8" target="_blank" rel="noopener noreferrer">Iron-mediated reversible lattice-oxygen redox enables stable 200 Wh kg<sup>−1</sup> sodium-ion batteries</a></h5>
+                            <div class="pub-authors">Chu, Shiyong#; <span class="author-self">Wang, Liguang#</span>; Bian, Jingjing#; Cheng, Chen; Tian, Jiaming; Sheng, Chuanchao; Zhou, Zengqing; Shi, Tianze; Guo, Jinghua; Zhang, Liang; Lu, Jun; Zhou, Haoshen; Guo, Shaohua</div>
+                            <div class="pub-meta"><span class="journal-bold">Nature Energy</span>, (2026), https://doi.org/10.1038/s41560-026-02112-8</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1038/s41560-026-02112-8" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adma.202514168" target="_blank" rel="noopener noreferrer">Reactivating the Current Collector: A Catalytic Strategy for Carbon-Free Sulfur-Based Cathodes</a></h5>
+                            <div class="pub-authors">Chen, Xi; Yu, Dongxu; Wang, Dashuai; Peng, Bo; Zhang, Xueyan; Xu, Jiahui; Liang, Chengdu; <span class="author-self">Wang, Liguang*</span></div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Materials</span>, Vol. 38, No. 5, pp. e14168 (2026)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adma.202514168" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adma.202514943" target="_blank" rel="noopener noreferrer">Grain Welding Strategy Suppressing Chemomechanical Failure in Polycrystalline Cathode for High-Voltage Fast-Charging Sodium-Ion Batteries</a></h5>
+                            <div class="pub-authors">Peng, Bo; Huang, Xing; Xu, Chengrong; Huang, Zhiwei; Zhu, Ruichen; Jin, Chuangui; <span class="author-self">Wang, Liguang*</span>; Zhou, Haoshen</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Materials</span>, Vol. 38, No. 7, pp. e14943 (2026)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adma.202514943" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/anie.202514839" target="_blank" rel="noopener noreferrer">Regulating Sodium Vacancy and Local Coordination Structure Enabled Stable Mn-Based NASICON Cathodes</a></h5>
+                            <div class="pub-authors">Zhang, Nan; Zhang, Han; Liu, Jiaxuan; Yan, Qian; Wang, JianXin; Xu, Jiahui; Wang, Dianlong; <span class="author-self">Wang, Liguang*</span>; Liu, Huakun; Dou, Shixue; Wang, Bo</div>
+                            <div class="pub-meta"><span class="journal-bold">Angewandte Chemie International Edition</span>, Vol. 65, No. 4, pp. e14839 (2026)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/anie.202514839" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adma.202519444" target="_blank" rel="noopener noreferrer">Suppressing Electric-Field-Induced Cathodic Salt Crystallization for Stable Zinc-Ion Batteries</a></h5>
+                            <div class="pub-authors">Yi, Zhejian; Luo, Chenxi; Wang, Hainan; Ma, Ninggui; Xie, Yiming; Wu, Jihuai; Lan, Zhang; Yu, Fuda; Que, Lanfang; <span class="author-self">Wang, Liguang*</span></div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Materials</span>, Vol. 38, No. 10, pp. e19444 (2026)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adma.202519444" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/anie.202523729" target="_blank" rel="noopener noreferrer">Dual-Site Geometry Mediates Dynamic LiO2 Binding for Efficient Lithium–Oxygen Batteries</a></h5>
+                            <div class="pub-authors">Guan, Shuyun; Jia, Wenhao; Gao, Yinkun; Liu, Mingyang; <span class="author-self">Wang, Liguang*</span>; Zhu, Yongming; Li, Xudong</div>
+                            <div class="pub-meta"><span class="journal-bold">Angewandte Chemie International Edition</span>, pp. e23729 (2026)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/anie.202523729" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1038/s41467-026-69319-x" target="_blank" rel="noopener noreferrer">In situ-formed CN anchors embedded into Sn-based negative electrodes for long-life Na-ion batteries</a></h5>
+                            <div class="pub-authors">Li, Yanqiong; Fan, Xiangfeng; <span class="author-self">Wang, Liguang*</span>; Tu, Yuan; Cai, Ziyang; Jiao, Shuhong; Sun, Yang; Lu, Xia; Wang, Shurong; Hu, Yong-Sheng; Pan, Huilin</div>
+                            <div class="pub-meta"><span class="journal-bold">Nature Communications</span> (2026)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1038/s41467-026-69319-x" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/smll.72943" target="_blank" rel="noopener noreferrer">Mitigating Reaction Barriers in Ni-Rich Cathodes via Surface-Bulk Coupling Strategy for Fast-Charging</a></h5>
+                            <div class="pub-authors">Sun, Yingjie; Li, Xudong; Gao, Peng; Jia, Wenhao; Liu, Shumin; Monteiro, Robson; Liu, Zhongzhu; Parreira, Luanna; Zhu, Ruichen; Zhu, Yongming; <span class="author-self">Wang, Liguang*</span></div>
+                            <div class="pub-meta"><span class="journal-bold">Small</span>, Vol. 22, No. 22, pp. e72943 (2026)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/smll.72943" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/acsnano.5c19344" target="_blank" rel="noopener noreferrer">Cation-Tuned Reaction Mechanisms in Metal Dicyanamide Anodes for Lithium-Ion Batteries with High Reversible Capacity</a></h5>
+                            <div class="pub-authors">Qiao, Xianji; Cai, Guohong; Müller, Peter C; Ye, Fengying; Xu, Pan; Hu, Yanyan; Corkett, Alex J; Zhang, Zeyue; Li, Weihong; Sun, Panlin; Tang, Qiulong; Luo, Wenting; Zhang, Wujun; Wang, Canpei; <span class="author-self">Wang, Liguang*</span>; Shen, Yanbin; Dronskowski, Richard; Lu, Jun; Sun, Junliang</div>
+                            <div class="pub-meta"><span class="journal-bold">ACS Nano</span>, Vol. 20, No. 8, pp. 7093-7104 (2026)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/acsnano.5c19344" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.mattod.2026.103284" target="_blank" rel="noopener noreferrer">Marching towards cobalt-free cathode for lithium-ion battery</a></h5>
+                            <div class="pub-authors"><span class="author-self">Wang, Liguang*</span>; Lu, Jun</div>
+                            <div class="pub-meta"><span class="journal-bold">Materials Today</span>, Vol. 95, pp. 103284 (2026)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.mattod.2026.103284" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.cej.2026.175249" target="_blank" rel="noopener noreferrer">Tuning surface residual lithium into a Li-ion-conductive protective interphase toward stable Ni-rich cathodes</a></h5>
+                            <div class="pub-authors">Liu, Shumin; Zhou, Huangzhang; Jia, Wenhao; Sun, Yingjie; Gao, Peng; Zhu, Ruichen; Zhu, Yongming; Li, Xudong; <span class="author-self">Wang, Liguang*</span></div>
+                            <div class="pub-meta"><span class="journal-bold">Chemical Engineering Journal</span>, pp. 175249 (2026)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.cej.2026.175249" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.ensm.2026.105175" target="_blank" rel="noopener noreferrer">Multiscale insights into intragranular cracking mechanisms in Ni-rich single-crystal layered oxide cathodes</a></h5>
+                            <div class="pub-authors">Zhou, Huazhang; Tian, Zenghua; Gao, Peng; Zhu, Yongming; Li, Xudong; <span class="author-self">Wang, Liguang*</span></div>
+                            <div class="pub-meta"><span class="journal-bold">Energy Storage Materials</span> (2026)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.ensm.2026.105175" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1007/s40820-026-02241-5" target="_blank" rel="noopener noreferrer">Anion Chemistry: Structure, Electrochemistry and Stability of NASICON Cathodes</a></h5>
+                            <div class="pub-authors">Cai, Tingting; Yu, Dongxu; Zhang, Xueyan; Zhao, Shuangshuang; <span class="author-self">Wang, Liguang*</span></div>
+                            <div class="pub-meta"><span class="journal-bold">Nano-Micro Letters</span>, Vol. 18, No. 1, pp. 395 (2026)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1007/s40820-026-02241-5" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adma.73702" target="_blank" rel="noopener noreferrer">Nanotrap Architectures for Mitigating Interfacial Transport Limitations in Cathode Catalyst Layers of Proton Exchange Membrane Fuel Cells</a></h5>
+                            <div class="pub-authors">Huang, Zhiyin; Peng, Yuqin; Qu, Zhiguo; Xing, Lixin; Zhong, Ruyi; Wu, Zenan; Ye, Siyu; Mu, Yutong; <span class="author-self">Wang, Liguang*</span>; Du, Lei</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Materials</span>, pp. e73702 (2026)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adma.73702" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1007/s40820-026-02256-y" target="_blank" rel="noopener noreferrer">Ultra-Sodiophilic Mixed Conductor Interphase Enabling Uniform Top Deposition for Quasi-Solid-State Sodium-Metal Batteries</a></h5>
+                            <div class="pub-authors">Lu, Chunching; Zhang, Guangxiang; Niu, Yuxiang; Zhu, Yupeng; Li, Siyuan; Huo, Hua; Ma, Yulin; Zuo, Pengjian; Yin, Geping; Gao, Yunzhi; <span class="author-self">Wang, Liguang*</span>; Fu, Chuankai; Chen, Wei</div>
+                            <div class="pub-meta"><span class="journal-bold">Nano-Micro Letters</span>, Vol. 18, No. 1, pp. 417 (2026)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1007/s40820-026-02256-y" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.ensm.2026.105369" target="_blank" rel="noopener noreferrer">Molecular Barrier Engineering Against Cryogenic Solvent Aggregation Enables Sodium-Ion Battery Operation at −60 °C</a></h5>
+                            <div class="pub-authors">Zhang, Guangxiang; Fu, Chuankai; Li, Shuai; Zhu, Ruichen; Ma, Chi; Yan, Jiaxin; Liu, Ziwei; Niu, Yuxiang; Huo, Hua; Du, Chunyu; <span class="author-self">Wang, Liguang*</span>; Gao, Yunzhi; Yin, Geping; Chen, Wei; Ma, Yulin</div>
+                            <div class="pub-meta"><span class="journal-bold">Energy Storage Materials</span> (2026)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.ensm.2026.105369" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1039/d6ta06831f" target="_blank" rel="noopener noreferrer">Crystal-scale engineering of layered oxide cathodes: structure–property relationships and design principles</a></h5>
+                            <div class="pub-authors">Jiahui Xu, Ruichen Zhu, Jiayao Guo, Di Wang, Yikang Yu, <span class="author-self">Liguang Wang*</span></div>
+                            <div class="pub-meta"><span class="journal-bold">Journal of Materials Chemistry A</span>, 2026, doi:10.1039/d6ta06831f</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1039/d6ta06831f" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1007/s11426-026-3945-y" target="_blank" rel="noopener noreferrer">Dual-site engineering activates oxide pathway mechanism for durable acidic oxygen evolution on cobalt-manganese oxybromide</a></h5>
+                            <div class="pub-authors">Junwei Han, Jiaying He, Qian Liu, XiruChen, Yue Yang, <span class="author-self">Liguang Wang*</span>, Huabing Tao, Yongzhi Zhou, Hangzhou Wang, Yaqiong Su*, Haobin Wu*</div>
+                            <div class="pub-meta"><span class="journal-bold">Science China Chemistry</span>, 2026, doi:10.1007/s11426-026-3945-y</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1007/s11426-026-3945-y" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/acsnano.6c15741" target="_blank" rel="noopener noreferrer">Breaking the Capacity–Stability Trade-Off in High-Voltage LiCoO2 via Opposite Co/O Redox Activity</a></h5>
+                            <div class="pub-authors">Mengjie Zhang, Yulin Cao, Lingfeng Shi, Ruichen Zhu, Yehang Dou, Fangchang Zhang, Yanfang Wang, Ke Li, Chun Zeng, Xueyan Zhang*, <span class="author-self">Liguang Wang*</span>, Zhouguang Lu*, Hua Huo*</div>
+                            <div class="pub-meta"><span class="journal-bold">ACS Nano</span>, 2026, doi:10.1021/acsnano.6c15741</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/acsnano.6c15741" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1038/s41560-026-02059-w" target="_blank" rel="noopener noreferrer">Harmonized sodium coordination engineering for high-energy phosphate cathodes</a></h5>
+                            <div class="pub-authors">Xinyu Li, Duoduo Zhang, Xiangfeng Fan, Lina Gao, Weixin Chen, <span class="author-self">Liguang Wang</span>, Ruiguo Cao, Shuhong Jiao, Yang Sun, Hao Guo, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Nature Energy</span> (2026)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1038/s41560-026-02059-w" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1038/s41563-026-02567-w" target="_blank" rel="noopener noreferrer">Optical nanoscopy of spatiotemporal metal stripping cooperativity at single-ion and subparticle resolution</a></h5>
+                            <div class="pub-authors">Weidong Zhang, Yilu Song, Jie Zhao, Paulo CD Mendes, Jorge Ontaneda, Lei Fan, Xiaozhi Xu, <span class="author-self">Liguang Wang</span>, Yingying Lu, Ctirad Červinka, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Nature Materials</span> (2026)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1038/s41563-026-02567-w" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+                    </div>
+
+                    <!-- =================== 2025 =================== -->
+                    <div class="year-section" data-year="2025">
+                        <h3 class="year-heading">2025</h3>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1007/s40820-024-01498-y" target="_blank" rel="noopener noreferrer">Advancements and challenges in organic–inorganic composite solid electrolytes for all-solid-state lithium batteries</a></h5>
+                            <div class="pub-authors">Zhang, Xueyan; Cheng, Shichao; Fu, Chuankai; Yin, Geping; <span class="author-self">Wang, Liguang*</span>; Wu, Yongmin; Huo, Hua</div>
+                            <div class="pub-meta"><span class="journal-bold">Nano-Micro Letters</span>, Vol. 17, No. 1, pp. 2 (2025)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1007/s40820-024-01498-y" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.cej.2025.161712" target="_blank" rel="noopener noreferrer">Knowledge-driven eutectic electrolyte design for Zn-ion batteries</a></h5>
+                            <div class="pub-authors">Chang, Jieyu; Liu, Qianqian; Sun, Chun; Hu, Jinhua; Bai, Jiabao; Li, Guoxian; Meng, Chuizhou; <span class="author-self">Wang, Liguang*</span></div>
+                            <div class="pub-meta"><span class="journal-bold">Chemical Engineering Journal</span>, Vol. 511, pp. 161712 (2025)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.cej.2025.161712" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/acsenergylett.5c00445" target="_blank" rel="noopener noreferrer">Unveiling Electrode–Electrolyte Interface Dynamics for Aqueous Zn Batteries</a></h5>
+                            <div class="pub-authors">Zhao, Xuesong; Yan, Mengdie; Bi, Jialu; Kong, Kangren; Liu, Liqi; Chen, Liya; Jin, Yihong; Zhou, Mengqi; Niu, Chaojiang; Liu, Zhaoming; Tang, Ruikang; <span class="author-self">Wang, Liguang*</span>; Lu, Jun; Pan, Huilin</div>
+                            <div class="pub-meta"><span class="journal-bold">ACS Energy Letters</span>, Vol. 10, No. 5, pp. 2400-2409 (2025)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/acsenergylett.5c00445" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/cnl2.70019" target="_blank" rel="noopener noreferrer">Crystalline Structure Engineering of Metal Sulfides Toward Advanced Sodium-Ion Storage</a></h5>
+                            <div class="pub-authors">Chen, Xi; Kong, Sainan; Yu, Dongxu; Ma, Yongqun; Shen, Fuxing; Xu, Xing; Chen, Jun; Liang, Chengdu; <span class="author-self">Wang, Liguang*</span></div>
+                            <div class="pub-meta"><span class="journal-bold">Carbon Neutralization</span>, Vol. 4, No. 4, pp. e70019 (2025)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/cnl2.70019" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.matre.2025.100359" target="_blank" rel="noopener noreferrer">Asymmetric ruthenium-iron dipole enabling fast alkaline water splitting on ruthenium-doped iron-nickel layered double hydroxides</a></h5>
+                            <div class="pub-authors">Li, Jiayang; Naren, Gaowa; Tang, Chunmei; Xing, Lixin; Meng, Ling; Wang, Ning; Zhang, Ruiming; Ye, Siyu; <span class="author-self">Wang, Liguang*</span>; Du, Lei</div>
+                            <div class="pub-meta"><span class="journal-bold">Materials Reports: Energy</span>, pp. 100359 (2025)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.matre.2025.100359" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/jacs.5c05478" target="_blank" rel="noopener noreferrer">Cu Nanocluster Size Effect Inducing the Transformation of Polysulfides to Cu2S/CuS for Durable Sodium Storage</a></h5>
+                            <div class="pub-authors">Wang, Canpei; Zheng, Mengting; Liu, Tiefeng; <span class="author-self">Wang, Liguang*</span>; Lu, Jun</div>
+                            <div class="pub-meta"><span class="journal-bold">Journal of the American Chemical Society</span>, Vol. 147, No. 32, pp. 28831-28841 (2025)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/jacs.5c05478" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/acs.energyfuels.5c01638" target="_blank" rel="noopener noreferrer">Bridging Academia and Industry: Promoting the Industrialization of Li-Rich Mn-Based Cathode Material</a></h5>
+                            <div class="pub-authors">Qin, Ning; <span class="author-self">Wang, Liguang*</span>; Lu, Jun</div>
+                            <div class="pub-meta"><span class="journal-bold">Energy &amp; Fuels</span>, Vol. 39, No. 33, pp. 15912-15918 (2025)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/acs.energyfuels.5c01638" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/s1872-2067(25)64805-4" target="_blank" rel="noopener noreferrer">Ultrafine L10 PtFeZn intermetallics via a two-step annealing process for oxygen reduction reaction: Decoupling alloying and ordering stages</a></h5>
+                            <div class="pub-authors">Xia, Yun-Fei; Liu, Bo; Zhang, Zi-Yu; Zhao, Zi-Gang; Guo, Pan; Lin, Si; Liu, Bing; Wang, Yan; Zhang, Yun-Long; Zhao, Lei; <span class="author-self">Wang, Liguang*</span>; Wang, Zhenbo</div>
+                            <div class="pub-meta"><span class="journal-bold">Chinese Journal of Catalysis</span>, Vol. 78, pp. 324-335 (2025)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/s1872-2067(25)64805-4" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1038/s41467-025-65062-x" target="_blank" rel="noopener noreferrer">Tuning cyanide coordination electronic structure enables stable Prussian blue analogues for sodium-ion batteries</a></h5>
+                            <div class="pub-authors">Wang, Yuanheng; Yan, Jiaxin; Xie, Bingxing; Meng, Yan; Fu, Chuankai; Kong, Fanpeng; Wang, Xingyu; Zhou, Qingjie; Chen, Xin; Li, Jianting; Du, Chunyu; <span class="author-self">Wang, Liguang*</span>; Zuo, Pengjian</div>
+                            <div class="pub-meta"><span class="journal-bold">Nature Communications</span>, Vol. 16, No. 1, pp. 10083 (2025)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1038/s41467-025-65062-x" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/ece2.70016" target="_blank" rel="noopener noreferrer">Pre-Lithiation and Continuous Lithium Compensation Technologies for Advanced Lithium-Ion Batteries</a></h5>
+                            <div class="pub-authors">Huang, Wang; Zhu, Yupeng; Ma, Yulin; Huo, Hua; Zuo, Pengjian; Du, Chunyu; Yin, Geping; Yu, Yikang; Li, Siyuan; Chen, Wei; <span class="author-self">Wang, Liguang*</span>; Fu, Chuankai</div>
+                            <div class="pub-meta"><span class="journal-bold">EcoEnergy</span>, Vol. 3, No. 4, pp. e70016 (2025)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/ece2.70016" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1038/s41467-025-61065-w" target="_blank" rel="noopener noreferrer">Inhibiting inter-layer gliding in transition metal layered oxides through interphase engineering for sodium-ion batteries</a></h5>
+                            <div class="pub-authors">Xing Zhou, Yang Chao, Xiaowei Liu, Xin Peng, Yongyuan Zhou, <span class="author-self">Liguang Wang</span>, Tongchao Liu, Ya You, Jun Lu</div>
+                            <div class="pub-meta"><span class="journal-bold">Nature Communications</span> (2025)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1038/s41467-025-61065-w" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1038/s41467-025-61461-2" target="_blank" rel="noopener noreferrer">Enhanced specific energy in fast-charging lithium-ion batteries negative electrodes via Ti-O covalency-mediated low potential</a></h5>
+                            <div class="pub-authors">Jun Huang, Qirui Yang, Anyi Hu, Liao Zhu, Zhengxi Zhang, Qinfeng Zheng, Zhouhong Ren, Shun Zheng, Yixiao Zhang, Xiaolong Yang, <span class="author-self">Liguang Wang</span>, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Nature Communications</span> (2025)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1038/s41467-025-61461-2" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.isci.2025.112820" target="_blank" rel="noopener noreferrer">Resonant inelastic X-ray scattering for studying materials for renewable energy conversion and storage</a></h5>
+                            <div class="pub-authors">Rongfu Hong, Lixin Xing, Mingjie Wu, Zhangsen Chen, Ning Wang, Ling Meng, Siyu Ye, <span class="author-self">Liguang Wang</span>, Gaixia Zhang, Lei Du</div>
+                            <div class="pub-meta"><span class="journal-bold">iScience</span> (2025)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.isci.2025.112820" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adfm.202503578" target="_blank" rel="noopener noreferrer">Understanding voltage decay and hysteresis in Li-rich layered oxide cathodes</a></h5>
+                            <div class="pub-authors">Hongfei Zheng, <span class="author-self">Liguang Wang</span>, Jun Lu</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Functional Materials</span> (2025)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adfm.202503578" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adfm.202422105" target="_blank" rel="noopener noreferrer">Voltage Regulation via Covalent Bond Strength to Increase Energy Density for Safe Fast-Charging Lithium-Ion Batteries</a></h5>
+                            <div class="pub-authors">Jun Huang, Qirui Yang, Weijia Yang, Zhuangzhuang Wei, Zhenming Xu, Le Zhang, Yixiao Zhang, Zhengxi Zhang, <span class="author-self">Liguang Wang</span>, Daming Zhu, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Functional Materials</span> (2025)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adfm.202422105" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.apcatb.2024.124775" target="_blank" rel="noopener noreferrer">Microenvironment regulation to synthesize sub-3 nm Pt-based high-entropy alloy nanoparticles enabling compressed lattice to boost electrocatalysis</a></h5>
+                            <div class="pub-authors">Zhiyin Huang, Yuqin Peng, Lixin Xing, Mijia Xu, Meng Fang, Huiqi Xie, Jiamin Li, Yangdong Zhou, Puwei Wu, Ning Wang, <span class="author-self">Liguang Wang*</span>, Siyu Ye, Lei Du.</div>
+                            <div class="pub-meta"><span class="journal-bold">Applied Catalysis B: Environment and Energy</span> (2025)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.apcatb.2024.124775" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+                    </div>
+
+                    <!-- =================== 2024 =================== -->
+                    <div class="year-section" data-year="2024">
+                        <h3 class="year-heading">2024</h3>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adfm.202312187" target="_blank" rel="noopener noreferrer">Regulating Micro-phase Structure in Plastic Crystal Gel Polymer Electrolyte for Quasi-Solid-State Lithium Metal Batteries</a></h5>
+                            <div class="pub-authors">Fu, Chuankai; Zhang, Xu; Huo, Hua; Zhu, Jiaming; Xu, Huifang; <span class="author-self">Wang, Liguang*</span>; Ma, Yulin; Gao, Yunzhi; Yin, Geping; Zuo, Pengjian; Lu, Jun</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Functional Materials</span>, Vol. 34, No. 9, pp. 2312187 (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adfm.202312187" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/aenm.202304244" target="_blank" rel="noopener noreferrer">Constructing Resilient Cross-Linked Network Toward Stable All-Solid-State Lithium-Sulfur Batteries</a></h5>
+                            <div class="pub-authors">Zhu, Xinxin; Jiang, Wei; <span class="author-self">Wang, Liguang*</span>; Lu, Jun</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Energy Materials</span>, Vol. 14, No. 17, pp. 2304244 (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/aenm.202304244" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.ces.2024.119775" target="_blank" rel="noopener noreferrer">Mechanically reinforced Ni-rich cathodes for High-Power and Long-Life All-Solid-State batteries</a></h5>
+                            <div class="pub-authors">Jiang, Wei; Zhu, Xinxin; Liu, Yawen; Wang, Kun; Huang, Renzhi; Wang, Xinyang; Ling, Min; <span class="author-self">Wang, Liguang*</span>; Liang, Chengdu</div>
+                            <div class="pub-meta"><span class="journal-bold">Chemical Engineering Science</span>, Vol. 288, pp. 119775 (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.ces.2024.119775" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/smll.202312011" target="_blank" rel="noopener noreferrer">Decoupling the Synergy Between PGM and PGM-Free Moieties toward Oxygen Reduction Reaction</a></h5>
+                            <div class="pub-authors">Zhou, Yangdong; Li, Jiayang; Wu, Qiaojing; Wang, Ning; Xing, Lixin; <span class="author-self">Wang, Liguang*</span>; Du, Lei; Ye, Siyu</div>
+                            <div class="pub-meta"><span class="journal-bold">Small</span>, Vol. 20, No. 30, pp. 2312011 (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/smll.202312011" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/acsenergylett.4c00307" target="_blank" rel="noopener noreferrer">Consolidating the vulnerable interphase of Ni-rich layered cathode by multifunctional water-based binder</a></h5>
+                            <div class="pub-authors">Gan, Qingmeng; Qin, Ning; Guo, Hao; Zhang, Fangchang; Yuan, Huimin; Luo, Wen; Li, Zhiqiang; Li, Yingzhi; Lu, Li; Xu, Zhenghe; <span class="author-self">Wang, Liguang*</span>; Lu, Jun; Lu, Zhouguang</div>
+                            <div class="pub-meta"><span class="journal-bold">ACS Energy Letters</span>, Vol. 9, No. 4, pp. 1562-1571 (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/acsenergylett.4c00307" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/acs.langmuir.4c00682" target="_blank" rel="noopener noreferrer">Selenium-doped sulfurized Polyacrylonitrile hybrid cathodes with ultrahigh sulfur content for high-performance solid-state Lithium sulfur batteries</a></h5>
+                            <div class="pub-authors">Ma, Shaobo; Yu, Zhenjiang; <span class="author-self">Wang, Liguang*</span>; Zuo, Pengjian</div>
+                            <div class="pub-meta"><span class="journal-bold">Langmuir</span>, Vol. 40, No. 17, pp. 9255-9264 (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/acs.langmuir.4c00682" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/aenm.202401802" target="_blank" rel="noopener noreferrer">Unveiling the Structure and Diffusion Kinetics at the Composite Electrolyte Interface in Solid-State Batteries</a></h5>
+                            <div class="pub-authors">Zhang, Xueyan; Cheng, Shichao; Fu, Chuankai; Yin, Geping; Zuo, Pengjian; <span class="author-self">Wang, Liguang*</span>; Huo, Hua</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Energy Materials</span>, Vol. 14, No. 34, pp. 2401802 (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/aenm.202401802" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.device.2024.100501" target="_blank" rel="noopener noreferrer">Intelligent dual-anode strategy for high-performance lithium-ion batteries</a></h5>
+                            <div class="pub-authors">Fu, Chuankai; Huo, Hua; Ma, Yulin; <span class="author-self">Wang, Liguang*</span>; Yin, Geping; Zuo, Pengjian; Gao, Yunzhi</div>
+                            <div class="pub-meta"><span class="journal-bold">Device</span>, Vol. 2, No. 11 (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.device.2024.100501" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.34133/research.0489" target="_blank" rel="noopener noreferrer">The tuning of strain in layered structure oxide cathodes for lithium-ion batteries</a></h5>
+                            <div class="pub-authors">Qiao, Xianji; <span class="author-self">Wang, Liguang*</span>; Lu, Jun</div>
+                            <div class="pub-meta"><span class="journal-bold">Research</span>, Vol. 7, pp. 0489 (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.34133/research.0489" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1039/d4ta03748k" target="_blank" rel="noopener noreferrer">Advances in sodium-ion battery cathode materials: exploring chemistry, reaction mechanisms, and prospects for next-generation energy storage systems</a></h5>
+                            <div class="pub-authors">Zhang, Han; <span class="author-self">Wang, Liguang*</span>; Zuo, Pengjian</div>
+                            <div class="pub-meta"><span class="journal-bold">Journal of Materials Chemistry A</span>, Vol. 12, No. 45, pp. 30971-31003 (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1039/d4ta03748k" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adfm.202407729" target="_blank" rel="noopener noreferrer">Novel Mn [N (CN) 2] 2 Anode with Cationic and Anionic Redox Chemistry for Li-Ion Batteries</a></h5>
+                            <div class="pub-authors">Xianji Qiao, Guohong Cai, Peter C Müller, <span class="author-self">Liguang Wang</span>, Guanqun Cai, Tiefeng Liu, Shangqing Qu, Yufeng Yin, Guobao Li, Alex J Corkett, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Functional Materials</span> (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adfm.202407729" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1039/d4ee01867b" target="_blank" rel="noopener noreferrer">A “seat-squatting” strategy via lithium substitution to suppress Fe-migration in Na layered oxide cathodes</a></h5>
+                            <div class="pub-authors">Yaoshen Niu, Zilin Hu, Huican Mao, Lin Zhou, <span class="author-self">Liguang Wang</span>, Xiaobing Lou, Bo Zhang, Dongdong Xiao, Yang Yang, Feixiang Ding, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Energy &amp; Environmental Science</span> (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1039/d4ee01867b" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/acsenergylett.4c02190" target="_blank" rel="noopener noreferrer">Silver-atom modulation of Ti vacancies in MXene enables uniform spherical lithium deposition</a></h5>
+                            <div class="pub-authors">Xue Liang Li, Wei Ying Lieu, <span class="author-self">Liguang Wang</span>, Dong Yan, Yifan Li, Tanmay Ghosh, Yuanjian Li, Jun Lu, Zhi Wei Seh, Hui Ying Yang</div>
+                            <div class="pub-meta"><span class="journal-bold">ACS Energy Letters</span> (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/acsenergylett.4c02190" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/advs.202404701" target="_blank" rel="noopener noreferrer">Layered Cathode with Ultralow Strain Empowers Rapid-Charging and Slow-Discharging Capability in Sodium Ion Battery</a></h5>
+                            <div class="pub-authors">Maolin Yang, Ziwei Chen, Zhongyuan Huang, Rui Wang, Wenhai Ji, Dong Zhou, Tao Zeng, Yongsheng Li, Jun Wang, <span class="author-self">Liguang Wang</span>, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Science</span> (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/advs.202404701" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.nanoen.2024.109862" target="_blank" rel="noopener noreferrer">Synergistic dual-additive regulated carbonate electrolyte stabilizes bidirectional interface for aggressive Ni-rich Li-metal full batteries</a></h5>
+                            <div class="pub-authors">Kun Wang, Xiangxiang Wang, Waqar Ahmad, Jing Zhao, Han Li, <span class="author-self">Liguang Wang</span>, Zhengwei Wan, Jiang Wei, Siying Li, Fan Yang, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Nano Energy</span> (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.nanoen.2024.109862" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adma.202404640" target="_blank" rel="noopener noreferrer">Intercalation-Induced Localized Conversion Reaction in h-CuSe for Ultrafast-Rechargeable and Long-Cycling Sodium Metal Battery</a></h5>
+                            <div class="pub-authors">Dongliang Chen, Yunkai Xu, Jianguo Lu, Yang Tian, Tongtong Li, Peng Jia, Xu Wang, Liqiang Zhang, Yang Hou, <span class="author-self">Liguang Wang</span>, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Materials</span> (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adma.202404640" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1038/s41893-024-01266-1" target="_blank" rel="noopener noreferrer">Fast-charge high-voltage layered cathodes for sodium-ion batteries</a></h5>
+                            <div class="pub-authors">Qidi Wang, Dong Zhou, Chenglong Zhao, Jianlin Wang, Hao Guo, <span class="author-self">Liguang Wang</span>, Zhenpeng Yao, Deniz Wong, Götz Schuck, Xuedong Bai, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Nature Sustainability</span> (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1038/s41893-024-01266-1" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adma.202308193" target="_blank" rel="noopener noreferrer">Challenges and advances in rechargeable batteries for extreme-condition applications</a></h5>
+                            <div class="pub-authors">Jialing Wu, Yunling Wu, <span class="author-self">Liguang Wang</span>, Hualin Ye, Jun Lu, Yanguang Li</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Materials</span> (2024)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adma.202308193" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+                    </div>
+
+                    <!-- =================== 2023 =================== -->
+                    <div class="year-section" data-year="2023">
+                        <h3 class="year-heading">2023</h3>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/cey2.282" target="_blank" rel="noopener noreferrer">Surplus energy utilization of spent lithium-ion batteries for high-profit organolithiums</a></h5>
+                            <div class="pub-authors">Lu, Jian; Zhao, Yun; Kang, Yuqiong; Li, Chenglei; Liu, Yawen; <span class="author-self">Wang, Liguang*</span>; Du, Hao; Fan, Meicen; Zhou, Yunan; Wozny, John; Li, Tao; Tavajohi, Naser; Kang, Feiyu; Li, Baohua</div>
+                            <div class="pub-meta"><span class="journal-bold">Carbon Energy</span>, Vol. 5, No. 6, pp. e282 (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/cey2.282" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/smtd.202201173" target="_blank" rel="noopener noreferrer">Probing Distinctive Redox Mechanism in Ni-Rich Cathode Via Real-Time Quick X-Ray Absorption Spectroscopy</a></h5>
+                            <div class="pub-authors">Ma, Lu#; <span class="author-self">Wang, Liguang#</span>; Liu, Tongchao; Wu, Tianpin; Lu, Jun</div>
+                            <div class="pub-meta"><span class="journal-bold">Small Methods</span>, Vol. 7, No. 1, pp. 2201173 (2023)</div>
+                            <div class="pub-indicators"><i class="fa-solid fa-circle-info me-1"></i> # Co-first Author</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/smtd.202201173" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/acsami.2c21841" target="_blank" rel="noopener noreferrer">Revealing lithium configuration in aged layered oxides for effective regeneration</a></h5>
+                            <div class="pub-authors">Liu, Yawen; Jiang, Wei; Ling, Min; Fan, Xinming; <span class="author-self">Wang, Liguang*</span>; Liang, Chengdu</div>
+                            <div class="pub-meta"><span class="journal-bold">ACS Applied Materials &amp; Interfaces</span>, Vol. 15, No. 7, pp. 9465-9474 (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/acsami.2c21841" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1007/s40820-023-01053-1" target="_blank" rel="noopener noreferrer">Sulfide-based all-solid-state lithium–sulfur batteries: challenges and perspectives</a></h5>
+                            <div class="pub-authors">Zhu, Xinxin; <span class="author-self">Wang, Liguang*</span>; Bai, Zhengyu; Lu, Jun; Wu, Tianpin</div>
+                            <div class="pub-meta"><span class="journal-bold">Nano-Micro Letters</span>, Vol. 15, No. 1, pp. 75 (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1007/s40820-023-01053-1" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.etran.2023.100246" target="_blank" rel="noopener noreferrer">Design of composite cathodes for sulfide-based all-solid-state batteries</a></h5>
+                            <div class="pub-authors">Jiang, Wei; Zhu, Xinxin; Liu, Yawen; Zhao, Shu; Huang, Renzhi; Ling, Min; <span class="author-self">Wang, Liguang*</span>; Liang, Chengdu</div>
+                            <div class="pub-meta"><span class="journal-bold">ETransportation</span>, Vol. 17, pp. 100246 (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.etran.2023.100246" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/idm2.12091" target="_blank" rel="noopener noreferrer">Empowering higher energy sodium-ion battery cathode by oxygen chemistry</a></h5>
+                            <div class="pub-authors">Wan, Guangying; Dou, Wendi; Zhu, Hanye; Zhang, Wu; Liu, Tiefeng; <span class="author-self">Wang, Liguang*</span>; Lu, Jun</div>
+                            <div class="pub-meta"><span class="journal-bold">Interdisciplinary Materials</span>, Vol. 2, No. 3, pp. 416-422 (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/idm2.12091" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1039/d3qm00400g" target="_blank" rel="noopener noreferrer">Insights into interfacial physiochemistry in sulfide solid-state batteries: a review</a></h5>
+                            <div class="pub-authors">Zheng, Jianhui; Zhu, Xinxin; <span class="author-self">Wang, Liguang*</span>; Lu, Jun; Wu, Tianpin</div>
+                            <div class="pub-meta"><span class="journal-bold">Materials Chemistry Frontiers</span>, Vol. 7, No. 20, pp. 4810-4832 (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1039/d3qm00400g" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/aenm.202301742" target="_blank" rel="noopener noreferrer">Fundamentals of electrolyte design for wide-temperature lithium metal batteries</a></h5>
+                            <div class="pub-authors">Liu, Qianqian; <span class="author-self">Wang, Liguang*</span></div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Energy Materials</span>, Vol. 13, No. 37, pp. 2301742 (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/aenm.202301742" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/aenm.202301462" target="_blank" rel="noopener noreferrer">Exploiting iodine redox chemistry for achieving high-capacity and durable peo-based all-solid-state LiFePO4/Li batteries</a></h5>
+                            <div class="pub-authors">Qingyue Han, Suqing Wang, <span class="author-self">Liguang Wang</span>, Wenhao Ren, Fangdan Zhang, Jun Lu, Haihui Wang</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Energy Materials</span> (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/aenm.202301462" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adma.202304022" target="_blank" rel="noopener noreferrer">Spin-State Modulation on Metal--Organic Frameworks for Electrocatalytic Oxygen Evolution</a></h5>
+                            <div class="pub-authors">Fan He, Qiang Zheng, Xiaoxuan Yang, <span class="author-self">Liguang Wang</span>, Zhao Zilin, Yunkai Xu, Lingzi Hu, Yongbo Kuang, Bin Yang, Zhongjian Li, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Materials</span> (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adma.202304022" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adfm.202304277" target="_blank" rel="noopener noreferrer">Suppressing thermal migration by fine-tuned metal-support interaction of iron single-atom catalyst for efficient ORR</a></h5>
+                            <div class="pub-authors">Jingwen Wang, Chuangang Hu, <span class="author-self">Liguang Wang</span>, Yang Yuan, Kai Zhu, Qing Zhang, Lin Yang, Jun Lu, Zhengyu Bai</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Functional Materials</span> (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adfm.202304277" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adma.202303297" target="_blank" rel="noopener noreferrer">Perovskite-Derived Bismuth with I- and Cs+ Dual Modification for High-Efficiency CO2-to-Formate Electrosynthesis and Al-CO2 Batteries</a></h5>
+                            <div class="pub-authors">Yuqing Luo, Shuhua Chen, Jie Zhang, Xue Ding, Binbin Pan, <span class="author-self">Liguang Wang</span>, Jun Lu, Muhan Cao, Yanguang Li</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Materials</span> (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adma.202303297" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/smtd.202201247" target="_blank" rel="noopener noreferrer">V-Integration Modulates t2g-Electrons of a Single Crystal Ir1-x (Ir0. 8V0. 2O2) x-BHC for Boosted and Durable OER in Acidic Electrolyte</a></h5>
+                            <div class="pub-authors">Waqar Ahmad, Yunpeng Hou, Rashid Khan, <span class="author-self">Liguang Wang</span>, Shiyu Zhou, Kun Wang, Zhengwei Wan, Shaodong Zhou, Wenjun Yan, Min Ling, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Small Methods</span> (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/smtd.202201247" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/anie.202302547" target="_blank" rel="noopener noreferrer">Understanding the synthesis kinetics of single-crystal Co-free Ni-rich cathodes</a></h5>
+                            <div class="pub-authors">Jingjie Liu, Yifei Yuan, Jianhui Zheng, <span class="author-self">Liguang Wang</span>, Jie Ji, Qing Zhang, Lin Yang, Zhengyu Bai, Jun Lu</div>
+                            <div class="pub-meta"><span class="journal-bold">Angewandte Chemie</span> (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/anie.202302547" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/aenm.202203999" target="_blank" rel="noopener noreferrer">Enabling an intrinsically safe and high-energy-density 4.5 V-class lithium-ion battery with synergistically incorporated fast ion conductors</a></h5>
+                            <div class="pub-authors">Lifan Wang, Guicheng Liu, Rui Xu, Xindong Wang, <span class="author-self">Liguang Wang</span>, Zhenpeng Yao, Chun Zhan, Jun Lu</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Energy Materials</span> (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/aenm.202203999" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1038/s41467-023-36793-6" target="_blank" rel="noopener noreferrer">A monofluoride ether-based electrolyte solution for fast-charging and low-temperature non-aqueous lithium metal batteries</a></h5>
+                            <div class="pub-authors">Guangzhao Zhang, Jian Chang, <span class="author-self">Liguang Wang</span>, Jiawei Li, Chaoyang Wang, Ruo Wang, Guoli Shi, Kai Yu, Wei Huang, Honghe Zheng, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Nature Communications</span> (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1038/s41467-023-36793-6" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/smtd.202201596" target="_blank" rel="noopener noreferrer">Reducing carbonaceous salts for facile fabrication of monolayer graphene</a></h5>
+                            <div class="pub-authors">Yujun Wu, Yifei Yuan, Wei Shuang, <span class="author-self">Liguang Wang</span>, Lin Yang, Zhengyu Bai, Jun Lu</div>
+                            <div class="pub-meta"><span class="journal-bold">Small Methods</span> (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/smtd.202201596" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adma.202210658" target="_blank" rel="noopener noreferrer">Atomically dispersed manganese on carbon substrate for aqueous and aprotic CO2 electrochemical reduction</a></h5>
+                            <div class="pub-authors">Meiling Wang, Ying Yao, Yuhui Tian, Yifei Yuan, <span class="author-self">Liguang Wang</span>, Feiyang Yang, Jingjie Ren, Xinrong Hu, Feng Wu, Shanqing Zhang, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Materials</span> (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adma.202210658" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/anie.202215406" target="_blank" rel="noopener noreferrer">Accelerated transfer and spillover of carbon monoxide through tandem catalysis for kinetics-boosted ethylene electrosynthesis</a></h5>
+                            <div class="pub-authors">Jiayi Chen, Dashuai Wang, Xiaoxuan Yang, Wenjun Cui, Xiahan Sang, Zilin Zhao, <span class="author-self">Liguang Wang</span>, Zhongjian Li, Bin Yang, Lecheng Lei, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Angewandte Chemie</span> (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/anie.202215406" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1038/s41565-022-01278-y" target="_blank" rel="noopener noreferrer">Highly stable, antiviral, antibacterial cotton textiles via molecular engineering</a></h5>
+                            <div class="pub-authors">Ji Qian, Qi Dong, Kayla Chun, Dongyang Zhu, Xin Zhang, Yimin Mao, James N Culver, Sheldon Tai, Jennifer R German, David P Dean, <span class="author-self">Liguang Wang</span>, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Nature Nanotechnology</span> (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1038/s41565-022-01278-y" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adma.202209483" target="_blank" rel="noopener noreferrer">Regulating surface oxygen activity by perovskite-coating-stabilized ultrahigh-nickel layered oxide cathodes</a></h5>
+                            <div class="pub-authors">Lifan Wang, Guicheng Liu, Rui Wang, Xindong Wang, <span class="author-self">Liguang Wang</span>, Zhenpeng Yao, Chun Zhan, Jun Lu</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Materials</span> (2023)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adma.202209483" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+                    </div>
+
+                    <!-- =================== 2022 =================== -->
+                    <div class="year-section" data-year="2022">
+                        <h3 class="year-heading">2022</h3>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1039/d1nh00585e" target="_blank" rel="noopener noreferrer">Challenges of layer-structured cathodes for sodium-ion batteries</a></h5>
+                            <div class="pub-authors">Shi, Caihong; <span class="author-self">Wang, Liguang*</span>; Chen, Xi’an; Li, Jun; Wang, Shun; Wang, Jichang; Jin, Huile</div>
+                            <div class="pub-meta"><span class="journal-bold">Nanoscale Horizons</span>, Vol. 7, No. 4, pp. 338-351 (2022)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1039/d1nh00585e" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/aenm.202103473" target="_blank" rel="noopener noreferrer">Revealing the design principles of Ni-rich cathodes for all-solid-state batteries</a></h5>
+                            <div class="pub-authors">Jiang, Wei; Zhu, Xinxin; Huang, Renzhi; Zhao, Shu; Fan, Xinming; Ling, Min; Liang, Chengdu; <span class="author-self">Wang, Liguang*</span></div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Energy Materials</span>, Vol. 12, No. 13, pp. 2103473 (2022)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/aenm.202103473" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.nanoen.2022.107093" target="_blank" rel="noopener noreferrer">Exploring the concordant solid-state electrolytes for all-solid-state lithium-sulfur batteries</a></h5>
+                            <div class="pub-authors">Zhu, Xinxin; Jiang, Wei; Zhao, Shu; Huang, Renzhi; Ling, Min; Liang, Chengdu; <span class="author-self">Wang, Liguang*</span></div>
+                            <div class="pub-meta"><span class="journal-bold">Nano Energy</span>, Vol. 96, pp. 107093 (2022)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.nanoen.2022.107093" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adma.202200744" target="_blank" rel="noopener noreferrer">Regulation of surface defect chemistry toward stable Ni-rich cathodes</a></h5>
+                            <div class="pub-authors"><span class="author-self">Wang, Liguang*</span>; Lei, Xincheng; Liu, Tongchao; Dai, Alvin; Su, Dong; Amine, Khalil; Lu, Jun; Wu, Tianpin</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Materials</span>, Vol. 34, No. 19, pp. 2200744 (2022)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adma.202200744" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1038/s41586-022-05238-3" target="_blank" rel="noopener noreferrer">Strain-retardant coherent perovskite phase stabilized Ni-rich cathode</a></h5>
+                            <div class="pub-authors"><span class="author-self">Wang, Liguang</span>; Liu, Tongchao; Wu, Tianpin; Lu, Jun</div>
+                            <div class="pub-meta"><span class="journal-bold">Nature</span>, Vol. 611, No. 7934, pp. 61-67 (2022)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1038/s41586-022-05238-3" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1039/d2cs00003b" target="_blank" rel="noopener noreferrer">Evolving aprotic Li--air batteries</a></h5>
+                            <div class="pub-authors">Zhenzhen Wu, Yuhui Tian, Chen Hao, <span class="author-self">Liguang Wang</span>, Shangshu Qian, Tianpin Wu, Shanqing Zhang, Jun Lu</div>
+                            <div class="pub-meta"><span class="journal-bold">Chemical Society Reviews</span> (2022)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1039/d2cs00003b" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adfm.202206081" target="_blank" rel="noopener noreferrer">Facet Strain Strategy of Atomically Dispersed Fe N C Catalyst for Efficient Oxygen Electrocatalysis</a></h5>
+                            <div class="pub-authors">Yang Yuan, Qing Zhang, Lin Yang, <span class="author-self">Liguang Wang</span>, Wenbo Shi, Pengfei Liu, Rui Gao, Lirong Zheng, Zhongwei Chen, Zhengyu Bai</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Functional Materials</span> (2022)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adfm.202206081" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.nanoen.2022.107502" target="_blank" rel="noopener noreferrer">Spreading monoclinic boundary network between hexagonal primary grains for high performance Ni-rich cathode materials</a></h5>
+                            <div class="pub-authors">Xing Xu, He Zhu, Yu Tang, <span class="author-self">Liguang Wang</span>, Qinghua Zhang, Yang Ren, Si Lan, Lizhi Xiang, Jiyuan Jian, Hua Huo, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Nano Energy</span> (2022)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.nanoen.2022.107502" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1038/s41586-022-04689-y" target="_blank" rel="noopener noreferrer">Origin of structural degradation in Li-rich layered oxide cathode</a></h5>
+                            <div class="pub-authors">Tongchao Liu, Jiajie Liu, Luxi Li, Lei Yu, Jiecheng Diao, Tao Zhou, Shunning Li, Alvin Dai, Wenguang Zhao, Shenyang Xu, <span class="author-self">Liguang Wang</span>, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Nature</span> (2022)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1038/s41586-022-04689-y" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/jacs.2c00865" target="_blank" rel="noopener noreferrer">Identifying luminol electrochemiluminescence at the cathode via single-atom catalysts tuned oxygen reduction reaction</a></h5>
+                            <div class="pub-authors">Hongyin Xia, Xiliang Zheng, Jing Li, <span class="author-self">Liguang Wang</span>, Yuan Xue, Chao Peng, Yanchao Han, Ying Wang, Shaojun Guo, Jin Wang, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Journal of the American Chemical Society</span> (2022)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/jacs.2c00865" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+                    </div>
+
+                    <!-- =================== 2021 =================== -->
+                    <div class="year-section" data-year="2021">
+                        <h3 class="year-heading">2021</h3>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/acsami.1c10760" target="_blank" rel="noopener noreferrer">Epoxy cross-linking enhanced the toughness of polysaccharides as a silicon anode binder for lithium-ion batteries</a></h5>
+                            <div class="pub-authors">Wang, Hongxun; Wei, Di; Zhang, Bao; Ji, Zekai; <span class="author-self">Wang, Liguang*</span>; Ling, Min; Liang, Chengdu</div>
+                            <div class="pub-meta"><span class="journal-bold">ACS Applied Materials &amp; Interfaces</span>, Vol. 13, No. 31, pp. 37704-37712 (2021)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/acsami.1c10760" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.jpowsour.2021.230335" target="_blank" rel="noopener noreferrer">Well-dispersed single-crystalline nickel-rich cathode for long-life high-voltage all-solid-state batteries</a></h5>
+                            <div class="pub-authors">Jiang, Wei; Fan, Xinming; Zhu, Xinxin; Wu, Zhenzhen; Li, Zeheng; Huang, Renzhi; Zhao, Shu; Zeng, Xiaomin; Hu, Guorong; Zhang, Bao; Zhang, Shanqing; Zhu, Lingyun; Yan, Lijing; Ling, Min; <span class="author-self">Wang, Liguang*</span>; Liang, Chengdu</div>
+                            <div class="pub-meta"><span class="journal-bold">Journal of Power Sources</span>, Vol. 508, pp. 230335 (2021)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.jpowsour.2021.230335" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1039/d1qm00951f" target="_blank" rel="noopener noreferrer">Fundamental air stability in solid-state electrolytes: principles and solutions</a></h5>
+                            <div class="pub-authors">Zhao, Shu; Zhu, Xinxin; Jiang, Wei; Ji, Zekai; Ling, Min; <span class="author-self">Wang, Liguang*</span>; Liang, Chengdu</div>
+                            <div class="pub-meta"><span class="journal-bold">Materials Chemistry Frontiers</span>, Vol. 5, No. 20, pp. 7452-7466 (2021)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1039/d1qm00951f" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1038/s41467-021-25686-1" target="_blank" rel="noopener noreferrer">Reaction inhomogeneity coupling with metal rearrangement triggers electrochemical degradation in lithium-rich layered cathode</a></h5>
+                            <div class="pub-authors"><span class="author-self">Wang, Liguang</span>; Liu, Tongchao; Dai, Alvin; De Andrade, Vincent; Ren, Yang; Xu, Wenqian; Lee, Sungsik; Zhang, Qinghua; Gu, Lin; Wang, Shun; others</div>
+                            <div class="pub-meta"><span class="journal-bold">Nature Communications</span>, Vol. 12, No. 1, pp. 5370 (2021)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1038/s41467-021-25686-1" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/exp.20210130" target="_blank" rel="noopener noreferrer">Exploring new battery knowledge by advanced characterizing technologies</a></h5>
+                            <div class="pub-authors"><span class="author-self">Wang, Liguang</span>; Liu, Tiefeng; Wu, Tianpin; Lu, Jun</div>
+                            <div class="pub-meta">Exploration, Vol. 1, No. 3, pp. 20210130 (2021)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/exp.20210130" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.cej.2021.129698" target="_blank" rel="noopener noreferrer">Lattice contraction tailoring in perovskite oxides towards improvement of oxygen electrode catalytic activity</a></h5>
+                            <div class="pub-authors">Yong-Rong Sun, Xue Zhang, <span class="author-self">Li-Guang Wang</span>, Zhi-Kai Liu, Ning Kang, Ni Zhou, Wen-Long You, Jia Li, Xue-Feng Yu</div>
+                            <div class="pub-meta"><span class="journal-bold">Chemical Engineering Journal</span> (2021)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.cej.2021.129698" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.cej.2021.128617" target="_blank" rel="noopener noreferrer">Stacking fault disorder induced by Mn doping in Ni (OH) 2 for supercapacitor electrodes</a></h5>
+                            <div class="pub-authors">Zhiguo Zhang, Hua Huo, <span class="author-self">Liguang Wang</span>, Shuaifeng Lou, Lizhi Xiang, Bingxing Xie, Qun Wang, Chunyu Du, Jiajun Wang, Geping Yin</div>
+                            <div class="pub-meta"><span class="journal-bold">Chemical Engineering Journal</span> (2021)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.cej.2021.128617" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/anie.202013047" target="_blank" rel="noopener noreferrer">Alloying nickel with molybdenum significantly accelerates alkaline hydrogen electrocatalysis</a></h5>
+                            <div class="pub-authors">Miao Wang, Hao Yang, Jinan Shi, Yufeng Chen, Yuan Zhou, <span class="author-self">Liguang Wang</span>, Sijia Di, Xuan Zhao, Jun Zhong, Tao Cheng, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Angewandte Chemie</span> (2021)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/anie.202013047" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.ensm.2020.12.008" target="_blank" rel="noopener noreferrer">An interface-reinforced rhombohedral Prussian blue analogue in semi-solid state electrolyte for sodium-ion battery</a></h5>
+                            <div class="pub-authors">Bingxing Xie, <span class="author-self">Liguang Wang</span>, Haifeng Li, Hua Huo, Can Cui, Baoyu Sun, Yulin Ma, Jiajun Wang, Geping Yin, Pengjian Zuo</div>
+                            <div class="pub-meta"><span class="journal-bold">Energy Storage Materials</span> (2021)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.ensm.2020.12.008" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1007/s40843-020-1464-6" target="_blank" rel="noopener noreferrer">Mass production of high-performance single atomic FeNC electrocatalysts via sequenced ultrasonic atomization and pyrolysis process</a></h5>
+                            <div class="pub-authors">Jugang Ma, <span class="author-self">Liguang Wang</span>, Yida Deng, Weiwei Zhang, Tianpin Wu, Yujun Song</div>
+                            <div class="pub-meta"><span class="journal-bold">Science China Materials</span> (2021)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1007/s40843-020-1464-6" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.jechem.2020.06.020" target="_blank" rel="noopener noreferrer">An advanced low-cost cathode composed of graphene-coated Na2. 4Fe1. 8 (SO4) 3 nanograins in a 3D graphene network for ultra-stable sodium storage</a></h5>
+                            <div class="pub-authors">Yongjin Fang, Qi Liu, Xiangming Feng, Weihua Chen, Xinping Ai, <span class="author-self">Liguang Wang</span>, Liang Wang, Zhiyuan Ma, Yang Ren, Hanxi Yang, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Journal of Energy Chemistry</span> (2021)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.jechem.2020.06.020" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+                    </div>
+
+                    <!-- =================== 2020 =================== -->
+                    <div class="year-section" data-year="2020">
+                        <h3 class="year-heading">2020</h3>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adfm.201910327" target="_blank" rel="noopener noreferrer">Ultralow-Strain Zn-Substituted Layered Oxide Cathode with Suppressed P2–O2 Transition for Stable Sodium Ion Storage</a></h5>
+                            <div class="pub-authors">Wang, Yanxia#; <span class="author-self">Wang, Liguang#</span>; Zhu, He; Chu, Jun; Fang, Yongjin; Wu, Lina; Huang, Ling; Ren, Yang; Sun, Cheng-Jun; Liu, Qi; Ai, Xinping; Yang, Hanxi; Cao, Yuliang</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Functional Materials</span> (2020)</div>
+                            <div class="pub-indicators"><i class="fa-solid fa-circle-info me-1"></i> # Co-first Author</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adfm.201910327" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/jacs.0c05498" target="_blank" rel="noopener noreferrer">Structural distortion induced by manganese activation in a lithium-rich layered cathode</a></h5>
+                            <div class="pub-authors"><span class="author-self">Wang, Liguang</span>; Dai, Alvin; Xu, Wenqian; Lee, Sungsik; Cha, Wonsuk; Harder, Ross; Liu, Tongchao; Ren, Yang; Yin, Geping; Zuo, Pengjian; others</div>
+                            <div class="pub-meta"><span class="journal-bold">Journal of the American Chemical Society</span>, Vol. 142, No. 35, pp. 14966-14973 (2020)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/jacs.0c05498" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/aenm.202002816" target="_blank" rel="noopener noreferrer">Single Ru Atoms Stabilized by Hybrid Amorphous/Crystalline FeCoNi Layered Double Hydroxide for Ultraefficient Oxygen Evolution</a></h5>
+                            <div class="pub-authors">Hu, Yidong#; Luo, Gan#; <span class="author-self">Wang, Liguang#</span>; Liu, Xiaokang; Qu, Yunteng; Zhou, Yansong; Zhou, Fangyao; Li, Zhijun; Li, Yafei; Yao, Tao; Xiong, Can; Yang, Bo; Yu, Zhenqiang; Wu, Yuen</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Energy Materials</span>, pp. 2002816 (2020)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/aenm.202002816" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.3389/fmats.2020.00111" target="_blank" rel="noopener noreferrer">Fundamentals of electrolytes for solid-state batteries: challenges and perspectives</a></h5>
+                            <div class="pub-authors"><span class="author-self">Wang, Liguang</span>; Li, Jun; Lu, Guolong; Li, Wenyan; Tao, Qiqi; Shi, Caihong; Jin, Huile; Chen, Guang; Wang, Shun</div>
+                            <div class="pub-meta">Frontiers in Materials, Vol. 7, pp. 111 (2020)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.3389/fmats.2020.00111" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/acssuschemeng.0c02154" target="_blank" rel="noopener noreferrer">Enabling Highly stable Li--O2 batteries with full discharge--charge capability: the porous binder-and carbon-free IrNi nanosheet cathode</a></h5>
+                            <div class="pub-authors">Zhengyi Qian, Xudong Li, <span class="author-self">Liguang Wang</span>, Tianpin Wu, Baoyu Sun, Lei Du, Yulin Ma, Chunyu Du, Pengjian Zuo, Geping Yin</div>
+                            <div class="pub-meta"><span class="journal-bold">ACS Sustainable Chemistry &amp; Engineering</span> (2020)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/acssuschemeng.0c02154" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/acsami.0c07260" target="_blank" rel="noopener noreferrer">Boosted oxygen evolution reactivity via atomic iron doping in cobalt carbonate hydroxide hydrate</a></h5>
+                            <div class="pub-authors">Shan Zhang, Bolong Huang, <span class="author-self">Liguang Wang</span>, Xiaoyan Zhang, Haishuang Zhu, Xiaoqing Zhu, Jing Li, Shaojun Guo, Erkang Wang</div>
+                            <div class="pub-meta"><span class="journal-bold">ACS Applied Materials &amp; Interfaces</span> (2020)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/acsami.0c07260" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/jacs.0c05054" target="_blank" rel="noopener noreferrer">Architecting a stable high-energy aqueous Al-ion battery</a></h5>
+                            <div class="pub-authors">Chunshuang Yan, Chade Lv, <span class="author-self">Liguang Wang</span>, Wei Cui, Leyuan Zhang, Khang Ngoc Dinh, Huiteng Tan, Chen Wu, Tianpin Wu, Yang Ren, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Journal of the American Chemical Society</span> (2020)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/jacs.0c05054" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1038/s42004-020-0289-y" target="_blank" rel="noopener noreferrer">Atomically dispersed palladium catalyses Suzuki--Miyaura reactions under phosphine-free conditions</a></h5>
+                            <div class="pub-authors">Guodong Ding, Leiduan Hao, Haiping Xu, <span class="author-self">Liguang Wang</span>, Jian Chen, Li Tao, Xinman Tu, Qiang Zhang</div>
+                            <div class="pub-meta"><span class="journal-bold">Communications Chemistry</span> (2020)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1038/s42004-020-0289-y" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/acs.nanolett.0c00542" target="_blank" rel="noopener noreferrer">Broadband tunable mid-infrared plasmon resonances in cadmium oxide nanocrystals induced by size-dependent nonstoichiometry</a></h5>
+                            <div class="pub-authors">Zeke Liu, Yaxu Zhong, Ibrahim Shafei, Soojin Jeong, <span class="author-self">Liguang Wang</span>, Hoai T Nguyen, Cheng-Jun Sun, Tao Li, Jun Chen, Lei Chen, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Nano Letters</span> (2020)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/acs.nanolett.0c00542" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/acscatal.9b04621" target="_blank" rel="noopener noreferrer">Stabilizing single-atom iron electrocatalysts for oxygen reduction via ceria confining and trapping</a></h5>
+                            <div class="pub-authors">Jin-Cheng Li, Sandip Maurya, Yu Seung Kim, Tao Li, <span class="author-self">Liguang Wang</span>, Qiurong Shi, Dong Liu, Shuo Feng, Yuehe Lin, Minhua Shao</div>
+                            <div class="pub-meta"><span class="journal-bold">ACS Catalysis</span> (2020)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/acscatal.9b04621" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adma.201906905" target="_blank" rel="noopener noreferrer">A general method for transition metal single atoms anchored on honeycomb-like nitrogen-doped carbon nanosheets</a></h5>
+                            <div class="pub-authors">Xiaoyan Zhang, Shan Zhang, Yong Yang, <span class="author-self">Liguang Wang</span>, Zijie Mu, Haishuang Zhu, Xiaoqing Zhu, Huanhuan Xing, Hongyin Xia, Bolong Huang, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Materials</span> (2020)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adma.201906905" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/anie.201912972" target="_blank" rel="noopener noreferrer">Crystal-growth-dominated fabrication of metal--organic frameworks with orderly distributed hierarchical porosity</a></h5>
+                            <div class="pub-authors">Hang Li, Fanchen Meng, Suoying Zhang, <span class="author-self">Liguang Wang</span>, Matthew Li, Lu Ma, Weina Zhang, Wenlei Zhang, Zhuhong Yang, Tianpin Wu, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Angewandte Chemie International Edition</span> (2020)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/anie.201912972" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/smtd.201900223" target="_blank" rel="noopener noreferrer">In situ probing multiple-scale structures of energy materials for Li-ion batteries</a></h5>
+                            <div class="pub-authors">He Zhu, Yalan Huang, Hekang Zhu, <span class="author-self">Liguang Wang</span>, Si Lan, Xinhui Xia, Qi Liu</div>
+                            <div class="pub-meta"><span class="journal-bold">Small Methods</span> (2020)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/smtd.201900223" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1007/s40843-019-1207-y" target="_blank" rel="noopener noreferrer">Boosting the activity of fe-n x moieties in Fe-NC electrocatalysts via phosphorus doping for oxygen reduction reaction</a></h5>
+                            <div class="pub-authors">Jin-Cheng Li, Hong Zhong, Mingjie Xu, Tao Li, <span class="author-self">Liguang Wang</span>, Qiurong Shi, Shuo Feng, Zhaoyuan Lyu, Dong Liu, Dan Du, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Science China Materials</span> (2020)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1007/s40843-019-1207-y" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+                    </div>
+
+                    <!-- =================== 2019 =================== -->
+                    <div class="year-section" data-year="2019">
+                        <h3 class="year-heading">2019</h3>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/adma.201904496" target="_blank" rel="noopener noreferrer">Ambient Synthesis of Single-Atom Catalysts from Bulk Metal via Trapping of Atoms by Surface Dangling Bonds</a></h5>
+                            <div class="pub-authors">Qu, Yunteng#; <span class="author-self">Wang, Liguang#</span>; Li, Zhijun; Li, Peng; Zhang, Qinghua; Lin, Yue; Zhou, Fangyao; Wang, Huijuan; Yang, Zhengkun; Hu, Yidong; Zhu, Mengzhao; Zhao, Xuyan; Han, Xiao; Wang, Chengming; Xu, Qian; Gu, Lin; Luo, Jun; Zheng, Lirong; Wu, Yuen</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Materials</span>, pp. 1904496 (2019)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/adma.201904496" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/acsenergylett.9b01347" target="_blank" rel="noopener noreferrer">Unraveling the origins of the “unreactive core” in conversion electrodes to trigger high sodium-ion electrochemistry</a></h5>
+                            <div class="pub-authors">Zhenjiang Yu, Jiajun Wang, <span class="author-self">Liguang Wang</span>, Ying Xie, Shuaifeng Lou, Zaixing Jiang, Yang Ren, Sungsik Lee, Pengjian Zuo, Hua Huo, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">ACS Energy Letters</span> (2019)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/acsenergylett.9b01347" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.electacta.2019.06.016" target="_blank" rel="noopener noreferrer">Enhancing high-voltage performances of nickel-based cathode material via aluminum and progressive concentration gradient modification</a></h5>
+                            <div class="pub-authors">Xing Xu, Jiyuan Jian, Lizhi Xiang, <span class="author-self">Liguang Wang</span>, Xiaoshu He, Geping Yin, Chunyu Du</div>
+                            <div class="pub-meta"><span class="journal-bold">Electrochimica Acta</span> (2019)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.electacta.2019.06.016" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.nanoen.2019.04.059" target="_blank" rel="noopener noreferrer">Achieving long-life Prussian blue analogue cathode for Na-ion batteries via triple-cation lattice substitution and coordinated water capture</a></h5>
+                            <div class="pub-authors">Bingxing Xie, Pengjian Zuo, <span class="author-self">Liguang Wang</span>, Jiajun Wang, Hua Huo, Mengxue He, Jie Shu, Haifeng Li, Shuaifeng Lou, Geping Yin</div>
+                            <div class="pub-meta"><span class="journal-bold">Nano Energy</span> (2019)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.nanoen.2019.04.059" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/jacs.8b09834" target="_blank" rel="noopener noreferrer">Thermal emitting strategy to synthesize atomically dispersed Pt metal sites from bulk Pt metal</a></h5>
+                            <div class="pub-authors">Yunteng Qu, Bingxu Chen, Zhijun Li, Xuezhi Duan, <span class="author-self">Liguang Wang</span>, Yue Lin, Tongwei Yuan, Fangyao Zhou, Yidong Hu, Zhengkun Yang, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Journal of the American Chemical Society</span> (2019)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/jacs.8b09834" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1039/c9ta00224c" target="_blank" rel="noopener noreferrer">Progressive concentration gradient nickel-rich oxide cathode material for high-energy and long-life lithium-ion batteries</a></h5>
+                            <div class="pub-authors">Xing Xu, Lizhi Xiang, <span class="author-self">Liguang Wang</span>, Jiyuan Jian, Chunyu Du, Xiaoshu He, Hua Huo, Xinqun Cheng, Geping Yin</div>
+                            <div class="pub-meta"><span class="journal-bold">Journal of Materials Chemistry A</span> (2019)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1039/c9ta00224c" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/aenm.201803963" target="_blank" rel="noopener noreferrer">Radially oriented single-crystal primary nanosheets enable ultrahigh rate and cycling properties of LiNi0. 8Co0. 1Mn0. 1O2 cathode material for lithium-ion batteries</a></h5>
+                            <div class="pub-authors">Xing Xu, Hua Huo, Jiyuan Jian, <span class="author-self">Liguang Wang</span>, He Zhu, Sheng Xu, Xiaoshu He, Geping Yin, Chunyu Du, Xueliang Sun</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Energy Materials</span> (2019)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/aenm.201803963" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1149/2.0451902jes" target="_blank" rel="noopener noreferrer">Enhanced electrochemical performance of LiNi0. 8Co0. 15Al0. 05O2 cathode material via Li2TiO3 nanoparticles coating</a></h5>
+                            <div class="pub-authors">Xiaoshu He, Xing Xu, <span class="author-self">Liguang Wang</span>, Chunyu Du, Xinqun Cheng, Pengjian Zuo, Yulin Ma, Geping Yin</div>
+                            <div class="pub-meta"><span class="journal-bold">Journal of The Electrochemical Society</span> (2019)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1149/2.0451902jes" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.carbon.2018.11.086" target="_blank" rel="noopener noreferrer">Palladium nanocrystals-imbedded mesoporous hollow carbon spheres with enhanced electrochemical kinetics for high performance lithium sulfur batteries</a></h5>
+                            <div class="pub-authors">Shaobo Ma, <span class="author-self">Liguang Wang</span>, Yang Wang, Pengjian Zuo, Mengxue He, Han Zhang, Lu Ma, Tianpin Wu, Geping Yin</div>
+                            <div class="pub-meta"><span class="journal-bold">Carbon</span> (2019)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.carbon.2018.11.086" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+                    </div>
+
+                    <!-- =================== 2018 =================== -->
+                    <div class="year-section" data-year="2018">
+                        <h3 class="year-heading">2018</h3>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.nanoen.2017.11.029" target="_blank" rel="noopener noreferrer">Understanding the initial irreversibility of metal sulfides for sodium-ion batteries via operando techniques</a></h5>
+                            <div class="pub-authors"><span class="author-self">Wang, Liguang</span>; Wang, Jiajun; Guo, Fangmin; Ma, Lu; Ren, Yang; Wu, Tianpin; Zuo, Pengjian; Yin, Geping; Wang, Jun</div>
+                            <div class="pub-meta"><span class="journal-bold">Nano Energy</span>, Vol. 43, pp. 184-191 (2018)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.nanoen.2017.11.029" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/smtd.201700293" target="_blank" rel="noopener noreferrer">Probing battery electrochemistry with in operando synchrotron X-ray imaging techniques</a></h5>
+                            <div class="pub-authors"><span class="author-self">Wang, Liguang</span>; Wang, Jiajun; Zuo, Pengjian</div>
+                            <div class="pub-meta"><span class="journal-bold">Small Methods</span>, Vol. 2, No. 8, pp. 1700293 (2018)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/smtd.201700293" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1021/acsaem.8b00923" target="_blank" rel="noopener noreferrer">Modifying high-voltage olivine-type LiMnPO4 cathode via Mg substitution in high-orientation crystal</a></h5>
+                            <div class="pub-authors"><span class="author-self">Wang, Liguang*</span>; Zhang, Han; Liu, Qi; Wang, Jiajun; Ren, Yang; Zhang, Xiaoyi; Yin, Geping; Wang, Jun; Zuo, Pengjian</div>
+                            <div class="pub-meta"><span class="journal-bold">ACS Applied Energy Materials</span>, Vol. 1, No. 11, pp. 5928-5935 (2018)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1021/acsaem.8b00923" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.carbon.2018.09.012" target="_blank" rel="noopener noreferrer">Cobalt nanoparticle-encapsulated carbon nanowire arrays: Enabling the fast redox reaction kinetics of lithium-sulfur batteries</a></h5>
+                            <div class="pub-authors">Zhang, Han#; <span class="author-self">Wang, Liguang#</span>; Li, Qin; Ma, Lu; Wu, Tianpin; Ma, Yulin; Wang, Jiajun; Du, Chunyu; Yin, Geping; Zuo, Pengjian</div>
+                            <div class="pub-meta"><span class="journal-bold">Carbon</span>, Vol. 140, pp. 385-393 (2018)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.carbon.2018.09.012" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/smll.201704282" target="_blank" rel="noopener noreferrer">ZIF-8 with ferrocene encapsulated: a promising precursor to single-atom Fe embedded nitrogen-doped carbon as highly efficient catalyst for oxygen electroreduction</a></h5>
+                            <div class="pub-authors">Jinpeng Wang, Guokang Han, <span class="author-self">Liguang Wang</span>, Lei Du, Guangyu Chen, Yunzhi Gao, Yulin Ma, Chunyu Du, Xinqun Cheng, Pengjian Zuo, et al.</div>
+                            <div class="pub-meta"><span class="journal-bold">Small</span> (2018)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/smll.201704282" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+                    </div>
+
+                    <!-- =================== 2017 =================== -->
+                    <div class="year-section" data-year="2017">
+                        <h3 class="year-heading">2017</h3>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.nanoen.2017.02.046" target="_blank" rel="noopener noreferrer">Unraveling the origin of irreversible capacity loss in NaNiO2 for high voltage sodium ion batteries</a></h5>
+                            <div class="pub-authors"><span class="author-self">Wang, Liguang</span>; Wang, Jiajun; Zhang, Xiaoyi; Ren, Yang; Zuo, Pengjian; Yin, Geping; Wang, Jun</div>
+                            <div class="pub-meta"><span class="journal-bold">Nano Energy</span>, Vol. 34, pp. 215-223 (2017)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.nanoen.2017.02.046" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1016/j.elecom.2017.09.002" target="_blank" rel="noopener noreferrer">Mixed lithium ion and electron conducting LiAlPO3.93F1.07-coated LiCoO2 cathode with improved electrochemical performance</a></h5>
+                            <div class="pub-authors">Bin Shen, Qianqian Liu, <span class="author-self">Liguang Wang</span>, Geping Yin, Pengjian Zuo, Yulin Ma, Xinqun Cheng, Chunyu Du, Yunzhi Gao</div>
+                            <div class="pub-meta"><span class="journal-bold">Electrochemistry Communications</span> (2017)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1016/j.elecom.2017.09.002" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1002/aenm.201602706" target="_blank" rel="noopener noreferrer">Elucidating the Irreversible Mechanism and Voltage Hysteresis in Conversion Reaction for High-Energy Sodium--Metal Sulfide Batteries</a></h5>
+                            <div class="pub-authors">Jiajun Wang, <span class="author-self">Liguang Wang</span>, Christopher Eng, Jun Wang</div>
+                            <div class="pub-meta"><span class="journal-bold">Advanced Energy Materials</span> (2017)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1002/aenm.201602706" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+                    </div>
+
+                    <!-- =================== 2015 =================== -->
+                    <div class="year-section" data-year="2015">
+                        <h3 class="year-heading">2015</h3>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1039/c4ta05900j" target="_blank" rel="noopener noreferrer">Improved electrochemical performance and capacity fading mechanism of nano-sized LiMn 0.9 Fe 0.1 PO 4 cathode modified by polyacene coating</a></h5>
+                            <div class="pub-authors"><span class="author-self">Wang, Liguang</span>; Zuo, Pengjian; Yin, Geping; Ma, Yulin; Cheng, Xinqun; Du, Chunyu; Gao, Yunzhi</div>
+                            <div class="pub-meta"><span class="journal-bold">Journal of Materials Chemistry A</span>, Vol. 3, No. 4, pp. 1569-1579 (2015)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1039/c4ta05900j" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1039/c5nr01881a" target="_blank" rel="noopener noreferrer">A Novel Nanoporous Fe-doped Lithium Manganese Phosphate Material with Superior Long-term Cycling Stability for Lithium-ion Batteries</a></h5>
+                            <div class="pub-authors">Pengjian Zuo, <span class="author-self">Liguang Wang</span>, Zhang Wei, Geping Yin, Yulin Ma, Chunyu Du, Xinqun Cheng, Yunzhi Gao</div>
+                            <div class="pub-meta"><span class="journal-bold">Nanoscale</span> (2015)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1039/c5nr01881a" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+
+                        <div class="pub-card">
+                            <h5 class="pub-title"><a href="https://doi.org/10.1007/s10008-014-2556-2" target="_blank" rel="noopener noreferrer">High-performance carbon-coated LiMnPO4 nanocomposites by facile two-step solid-state synthesis for lithium-ion battery</a></h5>
+                            <div class="pub-authors">Guangyu Cheng, Pengjian Zuo, <span class="author-self">Liguang Wang</span>, Wei Shi, Yulin Ma, Chunyu Du, Cheng Xinqun, Yunzhi Gao, Geping Yin</div>
+                            <div class="pub-meta"><span class="journal-bold">Journal of Solid State Electrochemistry</span> (2015)</div>
+                            <div class="pub-links"><a class="pub-link" href="https://doi.org/10.1007/s10008-014-2556-2" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i>DOI</a></div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="page page-content fade-in">
+        <div class="container">
+            <div class="section-head"><h2 class="section-title">Research Team</h2><p class="section-lead">Researchers and students of the Xplore-energy Lab.</p></div>
+            <div class="team-group">
+                <h3 class="group-title">Principal Investigator</h3>
+                <div class="row g-4">
+                    <div class="col-6 col-md-4 col-lg-3"><div class="team-card"><div class="team-img-wrapper"><img src="profile.jpg" loading="lazy" class="team-avatar" alt="Dr. Liguang Wang"></div><div class="team-info"><h4 class="team-name">Dr. Liguang Wang</h4><p class="text-accent fw-semibold mb-1">Professor</p><p class="text-muted small mb-0">Principal Investigator</p></div></div></div>
+                </div>
+            </div>
+            <div class="team-group">
+                <h3 class="group-title">Postdoctoral Researchers</h3>
+                <div class="row g-4">
+                    <div class="col-6 col-md-4 col-lg-3"><div class="team-card"><div class="team-img-wrapper"><img src="yuyikang.jpg" loading="lazy" class="team-avatar" alt="Dr. Yikang Yu"></div><div class="team-info"><h4 class="team-name">Dr. Yikang Yu</h4><p class="text-accent fw-semibold mb-1">Postdoc</p><p class="text-muted small mb-0">Anode &amp; Electrolyte</p></div></div></div>
+                    <div class="col-6 col-md-4 col-lg-3"><div class="team-card"><div class="team-img-wrapper"><img src="xueyan.jpg" loading="lazy" class="team-avatar" alt="Dr. Xueyan Zhang"></div><div class="team-info"><h4 class="team-name">Dr. Xueyan Zhang</h4><p class="text-accent fw-semibold mb-1">Postdoc</p><p class="text-muted small mb-0">Solid-state battery &amp; NMR</p></div></div></div>
+                    <div class="col-6 col-md-4 col-lg-3"><div class="team-card"><div class="team-img-wrapper"><img src="lixiaopeng.jpg" loading="lazy" class="team-avatar" alt="Dr. Xiaopeng Li"></div><div class="team-info"><h4 class="team-name">Dr. Xiaopeng Li</h4><p class="text-accent fw-semibold mb-1">Postdoc</p><p class="text-muted small mb-0">Cathode materials</p></div></div></div>
+                    <div class="col-6 col-md-4 col-lg-3"><div class="team-card"><div class="team-img-wrapper"><img src="gejianwen.jpg" loading="lazy" class="team-avatar" alt="Dr. Jianwen Ge"></div><div class="team-info"><h4 class="team-name">Dr. Jianwen Ge</h4><p class="text-accent fw-semibold mb-1">Postdoc</p><p class="text-muted small mb-0">Solid-state battery</p></div></div></div>
+                </div>
+            </div>
+            <div class="team-group">
+                <h3 class="group-title">Ph.D. Students</h3>
+                <div class="row g-4">
+                    <div class="col-6 col-md-4 col-lg-3"><div class="team-card"><div class="team-img-wrapper"><img src="zhuruichen.jpg" loading="lazy" class="team-avatar" alt="Ruichen Zhu"></div><div class="team-info"><h4 class="team-name">Ruichen Zhu</h4><p class="text-accent fw-semibold mb-1">Ph.D. Student 2024</p><p class="text-muted small mb-0">TXM &amp; AI</p></div></div></div>
+                    <div class="col-6 col-md-4 col-lg-3"><div class="team-card"><div class="team-img-wrapper"><img src="guojiayao.jpg" loading="lazy" class="team-avatar" alt="Jiayao Guo"></div><div class="team-info"><h4 class="team-name">Jiayao Guo</h4><p class="text-accent fw-semibold mb-1">Ph.D. Student 2025</p><p class="text-muted small mb-0">Crystal growth &amp; Diffraction (imaging)</p></div></div></div>
+                    <div class="col-6 col-md-4 col-lg-3"><div class="team-card"><div class="team-img-wrapper"><img src="wanghanlin.jpg" loading="lazy" class="team-avatar" alt="Hanlin Wang"></div><div class="team-info"><h4 class="team-name">Hanlin Wang</h4><p class="text-accent fw-semibold mb-1">Ph.D. Student 2026</p><p class="text-muted small mb-0">Cathode</p></div></div></div>
+                </div>
+            </div>
+            <div class="team-group">
+                <h3 class="group-title">M.S. Students</h3>
+                <div class="row g-4">
+                    <div class="col-6 col-md-4 col-lg-3"><div class="team-card"><div class="team-img-wrapper"><img src="xujiahui.jpg" loading="lazy" class="team-avatar" alt="Jiahui Xu"></div><div class="team-info"><h4 class="team-name">Jiahui Xu</h4><p class="text-accent fw-semibold mb-1">M.S. Student 2024</p><p class="text-muted small mb-0">LiNiO2 &amp; Diffraction (imaging)</p></div></div></div>
+                    <div class="col-6 col-md-4 col-lg-3"><div class="team-card"><div class="team-img-wrapper"><img src="wangdi.jpg" loading="lazy" class="team-avatar" alt="Di Wang"></div><div class="team-info"><h4 class="team-name">Di Wang</h4><p class="text-accent fw-semibold mb-1">M.S. Student 2025</p><p class="text-muted small mb-0">Solid-state battery &amp; Spectroscopy</p></div></div></div>
+                    <div class="col-6 col-md-4 col-lg-3"><div class="team-card"><div class="team-img-wrapper"><img src="chenxiuyu.jpg" loading="lazy" class="team-avatar" alt="Xiuyu Chen"></div><div class="team-info"><h4 class="team-name">Xiuyu Chen</h4><p class="text-accent fw-semibold mb-1">M.S. Student 2026</p><p class="text-muted small mb-0">Li- and Mn-rich cathode &amp; TXM</p></div></div></div>
+                </div>
+            </div>
+            <div class="team-group">
+                <h3 class="group-title">Undergraduate Students</h3>
+                <div class="row g-4">
+                    <div class="col-6 col-md-4 col-lg-3"><div class="team-card"><div class="team-img-wrapper"><img src="yixiaohui.jpg" loading="lazy" class="team-avatar" alt="Xiaohui Yi"></div><div class="team-info"><h4 class="team-name">Xiaohui Yi</h4><p class="text-accent fw-semibold mb-1">Undergraduate Student</p></div></div></div>
+                </div>
+            </div>
+            <div class="join-card mt-2"><strong>Interested in joining?</strong> We welcome prospective students, postdocs, and collaborators. <a href="mailto:wanglg@zju.edu.cn?subject=Prospective%20member%20%2F%20collaboration">Email Dr. Wang</a>.</div>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div class="container text-center text-muted">
+            <p class="mb-1">&copy; 2026 Xplore-energy Lab. All rights reserved.</p>
+            <p class="small text-secondary mb-2">College of Chemical and Biological Engineering • Zhejiang University</p>
+            <p id="visitors" class="small text-secondary mb-0"><i class="fa-regular fa-eye me-1"></i> Visitors: <span id="busuanzi_value_site_pv"></span></p>
+            <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+        </div>
+    </footer>
+
+    <button id="toTop" type="button" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    (function () {
+        var $ = function (s, r) { return (r || document).querySelector(s); };
+        var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+        var pages = $$('.page'), ids = pages.map(function (p) { return p.id; });
+        var titles = { about: '', news: 'News · ', projects: 'Research · ', publications: 'Publications · ', team: 'Team · ' };
+        var BASE = 'Liguang Wang | Xplore-energy Lab';
+
+        /* ---- Hash router ---- */
+        function route() {
+            var id = location.hash.slice(1);
+            if (ids.indexOf(id) < 0) id = 'about';
+            pages.forEach(function (p) {
+                var on = p.id === id;
+                p.hidden = !on;
+                if (on) { p.classList.remove('fade-in'); void p.offsetWidth; p.classList.add('fade-in'); }
+            });
+            $$('.nav-link').forEach(function (a) {
+                var on = a.getAttribute('href') === '#' + id;
+                a.classList.toggle('active', on);
+                if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+            });
+            document.title = titles[id] + BASE;
+            var nav = $('#navbarNav');
+            if (nav && nav.classList.contains('show') && window.bootstrap) bootstrap.Collapse.getOrCreateInstance(nav).hide();
+            window.scrollTo({ top: 0, behavior: 'instant' });
+        }
+        function setNavHeight() { document.documentElement.style.setProperty('--nav-h', $('.navbar').offsetHeight + 'px'); }
+
+        /* ---- Publications: search + year filter (year list is built automatically) ---- */
+        var sel = $('#yearSelect'), q = $('#pubSearch'), cnt = $('#pubCount'), empty = $('#pubEmpty');
+        var secs = $$('.year-section'), cards = $$('.pub-card');
+        cards.forEach(function (c) { c._t = c.textContent.toLowerCase(); });
+        secs.forEach(function (s) {
+            var o = document.createElement('option'); o.value = o.textContent = s.dataset.year; sel.appendChild(o);
+            var b = document.createElement('span'); b.className = 'year-count'; $('.year-heading', s).appendChild(b);
+        });
+        function filter() {
+            var terms = q.value.trim().toLowerCase().split(/\s+/).filter(Boolean), y = sel.value, shown = 0;
+            secs.forEach(function (s) {
+                var n = 0;
+                $$('.pub-card', s).forEach(function (c) {
+                    var ok = (y === 'all' || s.dataset.year === y) && terms.every(function (t) { return c._t.indexOf(t) > -1; });
+                    c.hidden = !ok; if (ok) n++;
+                });
+                s.hidden = !n; $('.year-count', s).textContent = n; shown += n;
+            });
+            cnt.textContent = shown + ' of ' + cards.length + ' papers';
+            empty.hidden = shown > 0;
+        }
+        q.addEventListener('input', filter); sel.addEventListener('change', filter);
+        $$('[data-pub-search]').forEach(function (a) {
+            a.addEventListener('click', function () { q.value = a.dataset.pubSearch; sel.value = 'all'; filter(); });
+        });
+
+        /* ---- News: show the latest 8, expand on demand ---- */
+        var items = $$('.news-item'), LIMIT = 8;
+        if (items.length > LIMIT) {
+            var extra = items.slice(LIMIT);
+            extra.forEach(function (i) { i.hidden = true; });
+            var btn = document.createElement('button');
+            btn.type = 'button'; btn.className = 'btn btn-outline-secondary btn-sm news-extra-btn';
+            btn.textContent = 'Show earlier news (' + extra.length + ')';
+            btn.addEventListener('click', function () { extra.forEach(function (i) { i.hidden = false; }); btn.remove(); });
+            $('.news-timeline').insertAdjacentElement('afterend', btn);
+        }
+
+        /* ---- Back to top ---- */
+        var top = $('#toTop');
+        window.addEventListener('scroll', function () { top.classList.toggle('show', window.scrollY > 500); }, { passive: true });
+        top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+        /* ---- Respect reduced motion for the carousel ---- */
+        if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches && window.bootstrap) {
+            var car = $('#highlightedWorksCarousel'); if (car) bootstrap.Carousel.getOrCreateInstance(car).pause();
+        }
+
+        setTimeout(function () { var v = $('#busuanzi_value_site_pv'), p = $('#visitors'); if (v && p && !v.textContent.trim()) p.hidden = true; }, 5000);
+
+        window.addEventListener('hashchange', route);
+        window.addEventListener('resize', setNavHeight);
+        window.addEventListener('load', setNavHeight);
+        filter(); setNavHeight(); route();
+    })();
+    </script>
+    
+</body>
+</html>
